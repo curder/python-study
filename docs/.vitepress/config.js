@@ -8,13 +8,14 @@ export default {
                 text: "基础",
                 items: [
                     {text: "Python安装", link: "/basic/install-python"},
-                    {text: "print方法", link: "/basic/function-print"},
+                    {text: "print函数", link: "/basic/function-print"},
                     {text: "转义字符", link: "/basic/escape-character"},
                     {text: "系统保留字", link: "/basic/reserved-word"},
                     {text: "变量的定义和使用", link: "/basic/variable"},
                     {text: "数据类型", link: "/basic/type-of-data"},
                     {text: "数据类型转换", link: "/basic/data-type-conversion"},
                     {text: "代码注释", link: "/basic/comments"},
+                    {text: "input函数", link: "/basic/function-input"}
                 ]
             },
         ],
