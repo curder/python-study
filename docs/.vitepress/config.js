@@ -4,7 +4,12 @@ export default {
     themeConfig: {
         nav: {},
         sidebar: [
-
+            {
+                text: "基础",
+                items: [
+                    {text: "Python安装", link: "/basic/install-python"},
+                ]
+            },
         ],
     }
 }
