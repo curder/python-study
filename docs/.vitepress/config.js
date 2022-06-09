@@ -12,6 +12,7 @@ export default {
                     {text: "转义字符", link: "/basic/escape-character"},
                     {text: "系统保留字", link: "/basic/reserved-word"},
                     {text: "变量的定义和使用", link: "/basic/variable"},
+                    {text: "数据类型", link: "basic/type-of-data"},
                 ]
             },
         ],
