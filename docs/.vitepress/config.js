@@ -1,4 +1,5 @@
 export default {
+    base: "/python-study/",
     title: "Python 学习",
     description: "Python 学习",
     themeConfig: {
