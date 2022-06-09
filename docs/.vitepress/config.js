@@ -9,6 +9,7 @@ export default {
                 items: [
                     {text: "Python安装", link: "/basic/install-python"},
                     {text: "print方法", link: '/basic/function-print'},
+                    {text: "转义字符", link: '/basic/escape-character'},
                 ]
             },
         ],
