@@ -8,6 +8,7 @@ export default {
                 text: "基础",
                 items: [
                     {text: "Python安装", link: "/basic/install-python"},
+                    {text: "print方法", link: '/basic/function-print'},
                 ]
             },
         ],
