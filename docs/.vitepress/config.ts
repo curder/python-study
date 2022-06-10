@@ -51,6 +51,7 @@ function sidebarBasic() {
                 {text: "pass语句", link: "/basic/pass"},
                 {text: "range函数", link: "/basic/function-range"},
                 {text: "循环结构", link: "/basic/while-and-for-in"},
+                {text: "else语句", link: "/basic/else"}
             ]
         },
     ];
