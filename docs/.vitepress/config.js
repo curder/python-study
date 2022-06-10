@@ -8,7 +8,7 @@ export default {
             {
                 text: "基础",
                 items: [
-                    {text: "Python安装", link: "/basic/install-python"},
+                    {text: "安装", link: "/basic/install-python"},
                     {text: "print函数", link: "/basic/function-print"},
                     {text: "转义字符", link: "/basic/escape-character"},
                     {text: "系统保留字", link: "/basic/reserved-word"},
