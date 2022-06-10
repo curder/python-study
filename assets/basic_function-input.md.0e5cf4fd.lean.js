@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,a as p}from"./app.10d12e75.js";const d='{"title":"input \u51FD\u6570","description":"","frontmatter":{},"headers":[],"relativePath":"basic/function-input.md","lastUpdated":1654848347000}',l={name:"basic/function-input.md"},o=p("",4),e=[o];function t(c,r,F,D,y,i){return a(),n("div",null,e)}var _=s(l,[["render",t]]);export{d as __pageData,_ as default};
