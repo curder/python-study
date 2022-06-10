@@ -75,3 +75,19 @@ for item in range(100, 1000):
     if first ** 3 + middle ** 3 + last ** 3 == item:
         print(item, end=" ")  # 153 370 371 407 
 ```
+
+## break 关键字 
+
+break语句用于结束循环结构，通常会配合if语句使用。
+
+```python
+# 从键盘录入数字，如果正确则结束循环
+for item in range(3):
+    pwd = input("Pls enter your number: ")
+
+    if int(pwd) == 11111:
+        print('Success.')
+        break  # 执行到里会跳出上层 for-in 循环
+    else:
+        print('error, Pls retry.')
+```
