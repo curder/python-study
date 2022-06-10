@@ -21,6 +21,7 @@ export default {
                     {text: "流程判断", link: "/basic/if-elif-else"},
                     {text: "pass语句", link: "/basic/pass"},
                     {text: "range函数", link: "/basic/function-range"},
+                    {text: "循环结构", link: "/basic/while-and-for-in"},
                 ]
             },
         ],
