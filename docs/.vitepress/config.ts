@@ -28,7 +28,7 @@ export default defineConfig({
 
 function nav() {
     return [
-        {text: 'Guide', link: '/guide/install-python', activeMatch: '/guide/'},
+        {text: 'Guide', link: '/guide/basic/install-python', activeMatch: '/guide/'},
     ];
 }
 
@@ -39,21 +39,21 @@ function sidebarGuide() {
             collapsible: true,
             collapsed: false,
             items: [
-                {text: "安装", link: "/guide/install-python"},
-                {text: "print函数", link: "/guide/function-print"},
-                {text: "转义字符", link: "/guide/escape-character"},
-                {text: "系统保留字", link: "/guide/reserved-word"},
-                {text: "变量的定义和使用", link: "/guide/variable"},
-                {text: "数据类型", link: "/guide/type-of-data"},
-                {text: "数据类型转换", link: "/guide/data-type-conversion"},
-                {text: "代码注释", link: "/guide/comments"},
-                {text: "input函数", link: "/guide/function-input"},
-                {text: "运算符", link: "/guide/operator"},
-                {text: "流程判断", link: "/guide/if-elif-else"},
-                {text: "pass语句", link: "/guide/pass"},
-                {text: "range函数", link: "/guide/function-range"},
-                {text: "循环结构", link: "/guide/while-and-for-in"},
-                {text: "else语句", link: "/guide/else"}
+                {text: "安装", link: "/guide/basic/install-python"},
+                {text: "print函数", link: "/guide/basic/function-print"},
+                {text: "转义字符", link: "/guide/basic/escape-character"},
+                {text: "系统保留字", link: "/guide/basic/reserved-word"},
+                {text: "变量的定义和使用", link: "/guide/basic/variable"},
+                {text: "数据类型", link: "/guide/basic/type-of-data"},
+                {text: "数据类型转换", link: "/guide/basic/data-type-conversion"},
+                {text: "代码注释", link: "/guide/basic/comments"},
+                {text: "input函数", link: "/guide/basic/function-input"},
+                {text: "运算符", link: "/guide/basic/operator"},
+                {text: "流程判断", link: "/guide/basic/if-elif-else"},
+                {text: "pass语句", link: "/guide/basic/pass"},
+                {text: "range函数", link: "/guide/basic/function-range"},
+                {text: "循环结构", link: "/guide/basic/while-and-for-in"},
+                {text: "else语句", link: "/guide/basic/else"}
             ]
         },
         {
