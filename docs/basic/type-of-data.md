@@ -1,4 +1,4 @@
-# 数据类型
+# 数据类型 {#top}
 
 - [字符串 str](#str)
 - [整数 int](#int)
@@ -91,7 +91,7 @@ print(True + 1)  # 2
 print(False + 1)  # 1
 ```
 
-### bool 函数
+### bool 函数 {#bool-function}
 
 `bool()` 函数允许评估任何值，并返回 `True` 或 `False`。
 

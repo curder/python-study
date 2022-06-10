@@ -1,4 +1,4 @@
-# input 函数
+# input 函数 {#input}
 
 input 函数接受用户输入的值。
 

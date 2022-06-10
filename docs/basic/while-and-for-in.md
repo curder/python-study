@@ -1,4 +1,4 @@
-# 循环结构
+# 循环结构 {#loop-structure}
 
 ## while 循环 {#while}
 
@@ -16,7 +16,7 @@ while a < 10:
     a += 1
 ```
 
-### 计算 `1...100` 之间的所有偶数和
+### 计算 `1...100` 之间的所有偶数和 {#using-while-compute-all-even-numbers}
 
 ```python
 count = 0  # 存储计算结果
@@ -51,7 +51,7 @@ for item in range(2):
     print('hello', end=" ")  # hello hello
 ```
 
-### 使用 for-in 求 1...100 之间偶数和
+### 使用 for-in 求 1...100 之间偶数和 {#using-for-in-compute-all-even-numbers}
 
 ```python
 count = 0  # 存储计算结果
@@ -64,7 +64,7 @@ for i in range(n, total + 1):
 print(f"从{n}到{total}之间的所有偶数和为：{count}")  # 从1到100之间的所有偶数和为：2550
 ```
 
-### 使用 for-in 找到水仙花数
+### 使用 for-in 找到水仙花数 {#use-for-in-to-find-the-number}
 
 什么是水仙花数？例如：`153 = 3 * 3 * 3 + 5 * 5 * 5 + 1 * 1 * 1`
 

@@ -1,6 +1,6 @@
-# 系统保留字
+# 系统保留字 {#top}
 
-## 打印出当前保留字
+## 打印出当前保留字 {#print-keyword}
 
 使用[keyword包](https://docs.python.org/3.10/library/keyword.html#module-keyword)的 `kwlist` 属性可以看到当前系统的所有保留字。
 
@@ -45,11 +45,11 @@ print(keyword.kwlist)
 # yield
 ```
 
-## 标识符
+## 标识符 {#identifier}
 
 变量、函数、类、模块和其他对象的名称。
 
-## 标识符规则
+## 标识符规则 {#identifier-rule}
 
 - 字母、数字、下划线
 - 不能以数字开头
