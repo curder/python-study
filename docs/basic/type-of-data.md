@@ -90,3 +90,26 @@ print(f2, type(f2))  # False <class 'bool'>
 print(True + 1)  # 2
 print(False + 1)  # 1
 ```
+
+### bool 函数
+
+`bool()` 函数允许评估任何值，并返回 `True` 或 `False`。
+
+下面对象的`bool`值均为 `False`，它们分别是：布尔值False，整型0，浮点数0.0，None，空字符串，空列表，空元祖，空字典，空集合。
+
+```python
+print(bool(False))  # 布尔值 False
+print(bool(0))  # 整型 0
+print(bool(0.0))  # 浮点数 0.0
+print(bool(None))  # None
+print(bool(''))  # 空字符串
+print(bool(""))  # 空字符串
+print(bool([]))  # 空列表
+print(bool(list()))  # 空列表
+print(bool(()))  # 空元组
+print(bool(tuple()))  # 空元祖
+print(bool({}))  # 空字典
+print(bool(dict()))  # 空字典
+print(bool(set()))  # 空集合
+
+```
