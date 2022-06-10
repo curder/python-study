@@ -20,6 +20,7 @@ export default {
                     {text: "运算符", link: "/basic/operator"},
                     {text: "流程判断", link: "/basic/if-elif-else"},
                     {text: "pass语句", link: "/basic/pass"},
+                    {text: "range函数", link: "/basic/function-range"},
                 ]
             },
         ],
