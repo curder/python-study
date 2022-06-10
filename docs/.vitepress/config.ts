@@ -62,7 +62,7 @@ function sidebarGuide() {
             collapsed: false,
             items: [
                 {text: "创建列表", link: "/guide/list/create"},
-                {text: "元素索引", link: "/guide/list/find-item-index"}
+                {text: "查询列表", link: "/guide/list/find"}
             ]
         }
     ];
