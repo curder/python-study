@@ -18,7 +18,8 @@ export default {
                     {text: "代码注释", link: "/basic/comments"},
                     {text: "input函数", link: "/basic/function-input"},
                     {text: "运算符", link: "/basic/operator"},
-                    {text: "流程判断", link: "/basic/if-elif-else"}
+                    {text: "流程判断", link: "/basic/if-elif-else"},
+                    {text: "pass语句", link: "/basic/pass"},
                 ]
             },
         ],
