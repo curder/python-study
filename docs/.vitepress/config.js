@@ -3,6 +3,13 @@ export default {
     title: "Python 学习",
     description: "Python 学习",
     themeConfig: {
+        editLink: {
+            pattern: 'https://github.com/curder/python-study/edit/main/docs/:path',
+            text: '编辑它'
+        },
+        socialLinks: [
+            { icon: 'github', link: 'https://github.com/curder/python-study' }
+        ],
         nav: {},
         sidebar: [
             {
