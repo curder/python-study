@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,a as l}from"./app.cdc0c4f1.js";const m='{"title":"\u4EE3\u7801\u6CE8\u91CA","description":"","frontmatter":{},"headers":[],"relativePath":"basic/comments.md"}',t={name:"basic/comments.md"},o=l("",6),e=[o];function p(c,i,r,y,d,_){return a(),n("div",null,e)}var D=s(t,[["render",p]]);export{m as __pageData,D as default};
