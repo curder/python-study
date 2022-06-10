@@ -19,9 +19,9 @@ while a < 10:
 ### 计算 `1...100` 之间的所有偶数和
 
 ```python
-count = 0 # 存储计算结果
-n = 1 # 开始数
-total = 100 # 最大数
+count = 0  # 存储计算结果
+n = 1  # 开始数
+total = 100  # 最大数
 
 while n <= total:
     if n % 2 == 0:
@@ -31,7 +31,7 @@ while n <= total:
 print(f"从1到{total}之间的所有偶数和为：{count}")  # 2550
 ```
 
-## for-in 循环 {#for-in} 
+## for-in 循环 {#for-in}
 
 `for-in`循环表示从字符串或序列等其他数据结构中依次取值。
 
@@ -52,6 +52,7 @@ for item in range(2):
 ```
 
 ### 使用 for-in 求 1...100 之间偶数和
+
 ```python
 count = 0  # 存储计算结果
 n = 1  # 开始数
@@ -76,9 +77,9 @@ for item in range(100, 1000):
         print(item, end=" ")  # 153 370 371 407 
 ```
 
-## break 关键字 
+## break 关键字
 
-break语句用于结束循环结构，通常会配合if语句使用。
+`break` 语句用于结束循环结构，通常会配合 `if` 语句使用。
 
 ```python
 # 从键盘录入数字，如果正确则结束循环
@@ -91,3 +92,18 @@ for item in range(3):
     else:
         print('error, Pls retry.')
 ```
+
+## continue 语句
+
+用于结束当前循环，进入下一次循环，通常与分支结构中的 `if` 一起使用。
+
+```python
+# 使用 continue 输出 [1,51)之间所有5的倍数的整数
+
+for item in range(1, 51):
+    if bool(item % 5):
+        continue
+    print(item, end=" ")  # 5 10 15 20 25 30 35 40 45 50
+```
+
+
