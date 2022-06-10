@@ -77,7 +77,7 @@ for item in range(100, 1000):
         print(item, end=" ")  # 153 370 371 407 
 ```
 
-## break 关键字
+## break 关键字 {#break}
 
 `break` 语句用于结束循环结构，通常会配合 `if` 语句使用。
 
@@ -93,7 +93,7 @@ for item in range(3):
         print('error, Pls retry.')
 ```
 
-## continue 语句
+## continue 语句 {#continue}
 
 用于结束当前循环，进入下一次循环，通常与分支结构中的 `if` 一起使用。
 
