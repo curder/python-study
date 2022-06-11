@@ -59,7 +59,7 @@ function sidebarGuide() {
         {
             text: "列表",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "创建列表", link: "/guide/list/create"},
                 {text: "查询列表", link: "/guide/list/find"},
