@@ -60,12 +60,12 @@ print(l[10])  # 抛出错误： IndexError
 - 切片的结果：原列表片段的**拷贝**
 - 切片的范围：左闭右开的区间，即：`[start:stop)`，包含 `start`，不包含 `stop`。
 - `step`参数：
-  - 当 `step` 为正数时，从`start`开始往后计算切片。
-    - `[:stop:step]` 获取切片中的新元素中第一个元素默认是列表的第一个元素。
-    - `[start::step]` 获取切片中的新元素中最后一个元素默认是列表的第一个元素。
-  - 当 `step` 为负数时，从 `start`开始往前计算切片。
-    - `[:stop:step]` 获取切片中的新元素中第一个元素默认是列表的最后一个元素。
-    - `[start::step]` 获取切片中的新元素中最后一个元素默认是列表的第一个元素。
+    - 当 `step` 为正数时，从`start`开始往后计算切片。
+        - `[:stop:step]` 获取切片中的新元素中第一个元素默认是列表的第一个元素。
+        - `[start::step]` 获取切片中的新元素中最后一个元素默认是列表的第一个元素。
+    - 当 `step` 为负数时，从 `start`开始往前计算切片。
+        - `[:stop:step]` 获取切片中的新元素中第一个元素默认是列表的最后一个元素。
+        - `[start::step]` 获取切片中的新元素中最后一个元素默认是列表的第一个元素。
 
 ```python
 l = [1, 2, 3, 4, 5, 6, 7, 8]
@@ -93,4 +93,27 @@ print(l[7::-1])  # [8, 7, 6, 5, 4, 3, 2, 1]
 
 # start=6,stop=0,step=-1
 print(l[6:0:-2])  # [7, 5, 3]
+```
+
+## 列表元素查询操作
+
+列表元素的查询操作是判断指定元素在列表中是否存在，使用 `in` 或 `not in`。
+
+```python
+l = [1, 2, 'hello', 'world', True]
+
+print(1 in l)  # True
+print(8 in l)  # False
+print(False not in l)  # True
+```
+
+`in` 或 `not in` 判断元素是否存在于列表中，返回对应的布尔值。
+
+## for-in遍历列表元素
+
+```python
+l = [1, 2, 'hello', 'world', True]
+
+for item in l:
+    print(item, end=" ")  # 1 2 hello world True 
 ```
