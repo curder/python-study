@@ -12,3 +12,17 @@ print([1, True, "hello", 'world', False, 0.1])  # [1, True, 'hello', 'world', Fa
 # 2. 使用list函数创建列表
 print(list([1, True, "hello", 'world', False, 0.1]))  # [1, True, 'hello', 'world', False, 0.1]
 ```
+
+## 列表生成式 {#list-comprehension}
+
+当需要生成一定有规则的数据时，可以使用列表生成式生成列表。它的语法格式为：`[ i for i in range(1, 11) ]`
+
+```python
+# 生成 1-10 的列表
+l = [i for i in range(1, 11)]
+print(l)  # [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+# 生成 1-6 的列表
+l2 = [i * 2 for i in range(1, 6)]
+print(l2)  # [2, 4, 6, 8, 10]
+```
