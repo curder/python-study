@@ -74,7 +74,6 @@ print(l)  # [1, 'hello', 'world']
 | `pop(index)` | 删除一个指定索引位置的元素<br />指定索引不存在时抛出IndexError异常<br />不指定索引则删除列表最后一个元素 |
 | 切片操作 | 一次至少删除一个元素<br />会产生新的列表 |
 | `clear()` | 清空列表元素 |
-| `del` | 删除列表 |
 
 ### `remote` 方法 {#remote-method}
 
