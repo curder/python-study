@@ -65,6 +65,7 @@ function sidebarGuide() {
                 {text: "查询列表", link: "/guide/list/find"},
                 {text: "编辑列表", link: "/guide/list/update"},
                 {text: "删除列表", link: "/guide/list/delete"},
+                {text: "列表排序", link: "/guide/list/sort"},
             ]
         }
     ];
