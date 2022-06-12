@@ -95,6 +95,7 @@ function sidebarGuide() {
             collapsed: false,
             items: [
                 {text: "创建集合", link: "/guide/set/create"},
+                {text: "查询集合", link: "/guide/set/find"},
             ],
         }
     ];
