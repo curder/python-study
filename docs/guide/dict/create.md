@@ -9,10 +9,10 @@
 
 ```python
 # 1. 使用花括号创建字典
-d = {"name": "curder", "hobby": "coding", "birthday": "08-16", "merried": False}
-print(d)  # {'name': 'curder', 'hobby': 'coding', 'birthday': '08-16', 'merried': False}
+d = {"name": "curder", "hobby": "coding"}
+print(d)  # {'name': 'curder', 'hobby': 'coding'}
 
 # 2. 使用dirt函数创建字典
-d = dict(name="curder", hobby="coding", birthday="08-16", merried=False)
-print(d)  # {'name': 'curder', 'hobby': 'coding', 'birthday': '08-16', 'merried': False}
+d = dict(name="curder", hobby="coding")
+print(d)  # {'name': 'curder', 'hobby': 'coding'}
 ```

@@ -6,7 +6,7 @@
 - 以键值对的方式存储数据，字典是一个无序的序列
 
 ```python
-d = {"name": "curder", "hobby": "coding", "birthday": "08-16", "married": False}
+d = {"name": "curder", "hobby": "coding"}
 
-print(d)  # {'name': 'curder', 'hobby': 'coding', 'birthday': '08-16', 'married': False}
+print(d)  # {'name': 'curder', 'hobby': 'coding'}
 ```

@@ -74,6 +74,7 @@ function sidebarGuide() {
             collapsed: false,
             items: [
                 {text: "创建字典", link: "/guide/dict/create"},
+                {text: "查询字典", link: "/guide/dict/find"},
             ]
         }
     ];
