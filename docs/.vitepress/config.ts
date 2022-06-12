@@ -67,6 +67,14 @@ function sidebarGuide() {
                 {text: "删除列表", link: "/guide/list/delete"},
                 {text: "列表排序", link: "/guide/list/sort"},
             ]
+        },
+        {
+            text: "字典",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: "创建字典", link: "/guide/dict/create"},
+            ]
         }
     ];
 }
