@@ -27,3 +27,14 @@
 上面使用中扩号或使用 `get` 方法获取字典中的元素的方式不同之处在于：
 1. `[]` 如果字典中不存在指定的key，则抛出 `KeyError` 异常
 2. `get` 方法取值，如果字典中不存在指定的key，放回 `None`，可以通过参数设置默认值，以便指定的 Key 不存在时返回
+
+## 判断键是否存在 {#key-exists}
+
+使用 `in` 或 `not in` 判断键是否存在于字典中，最后返回布尔值。
+
+```python
+d = {"name": "curder", "hobby": "coding"}
+
+print('hobby' in d)  # True
+print('name' not in d)  # False
+```
