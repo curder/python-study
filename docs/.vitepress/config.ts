@@ -86,6 +86,7 @@ function sidebarGuide() {
             collapsed: false,
             items: [
                 {text: "创建元组", link: "/guide/tuple/create"},
+                {text: "查询元组", link: "/guide/tuple/find"},
             ]
         }
     ];
