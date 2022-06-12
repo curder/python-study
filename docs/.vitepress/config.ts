@@ -97,6 +97,7 @@ function sidebarGuide() {
                 {text: "创建集合", link: "/guide/set/create"},
                 {text: "查询集合", link: "/guide/set/find"},
                 {text: "编辑集合", link: "/guide/set/update"},
+                {text: "删除集合", link: "/guide/set/delete"},
             ],
         },
     ];
