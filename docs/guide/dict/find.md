@@ -13,7 +13,7 @@
     ```
 
 2. 使用 `get()` 方法 + 键的方式获取，比如：`l.get('name')`
- 
+
     ```python
     d = {"name": "curder", "hobby": "coding"}
 
@@ -25,6 +25,7 @@
     ```
 
 上面使用中扩号或使用 `get` 方法获取字典中的元素的方式不同之处在于：
+
 1. `[]` 如果字典中不存在指定的key，则抛出 `KeyError` 异常
 2. `get` 方法取值，如果字典中不存在指定的key，放回 `None`，可以通过参数设置默认值，以便指定的 Key 不存在时返回
 
@@ -38,3 +39,46 @@ d = {"name": "curder", "hobby": "coding"}
 print('hobby' in d)  # True
 print('name' not in d)  # False
 ```
+
+## 获取字典所有键 {#get-keys-from-dict}
+
+通过字典的 `keys()` 方法可以获取到字典的所有键，再通过 `list` 函数将其转换为列表。
+
+```python
+d = {"name": "curder", "married": False}
+
+print(d.keys())  # dict_keys(['name', 'married'])
+print(list(d.keys()))  # ['name', 'married']
+```
+
+## 获取字典所有值 {#get-values-from-dict}
+
+通过字典的 `values()` 方法可以获取到字典的所有值，再通过 `list` 函数将其转换为列表。
+
+```python
+d = {"name": "curder", "married": False}
+
+print(d.values())  # dict_values(['curder', False])
+print(list(d.values()))  # ['curder', False]
+```
+
+## 获取字典的键值 {#get-items-from-dict}
+
+通过字典的 `items()` 方法可以获取到字典的所有键和值，再通过 `list` 函数将其转换为列表。
+
+```python
+d = {"name": "curder", "married": False}
+
+print(d.items())  # dict_items([('name', 'curder'), ('married', False)])
+print(list(d.items()))  # [('name', 'curder'), ('married', False)]
+```
+
+## for-in遍历字典 {#for-many-items}
+
+```python
+d = {"name": "curder", "married": False}
+
+for k in d:
+    print(k, d[k], end=", ")  # name curder, married False,
+```
+
