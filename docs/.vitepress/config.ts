@@ -53,7 +53,8 @@ function sidebarGuide() {
                 {text: "pass语句", link: "/guide/basic/pass"},
                 {text: "range函数", link: "/guide/basic/function-range"},
                 {text: "循环结构", link: "/guide/basic/while-and-for-in"},
-                {text: "else语句", link: "/guide/basic/else"}
+                {text: "else语句", link: "/guide/basic/else"},
+                {text: "zip函数", link: "/guide/basic/function-zip"},
             ]
         },
         {
