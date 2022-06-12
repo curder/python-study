@@ -16,3 +16,17 @@ print(d)  # {'name': 'curder', 'hobby': 'coding'}
 d = dict(name="curder", hobby="coding")
 print(d)  # {'name': 'curder', 'hobby': 'coding'}
 ```
+
+## 字典生成式 {#dict-comprehension}
+
+当需要生成一定有规则的数据时，可以使用自定生成式生成字典。
+
+它的语法格式为：`{ key: value for key, value in zipObject }`。
+
+```python
+items = ["Fruits", "Books", "Others"]
+prices = [41, 54, 85]
+
+d = {item: price for item, price in zip(items, prices)}
+print(d)  # {'Fruits': 41, 'Books': 54, 'Others': 85}
+```
