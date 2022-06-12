@@ -83,11 +83,19 @@ function sidebarGuide() {
         {
             text: "元组",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "创建元组", link: "/guide/tuple/create"},
                 {text: "查询元组", link: "/guide/tuple/find"},
             ]
+        },
+        {
+            text: "集合",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: "创建集合", link: "/guide/set/create"},
+            ],
         }
     ];
 }
