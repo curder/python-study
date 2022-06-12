@@ -17,6 +17,25 @@ d = dict(name="curder", hobby="coding")
 print(d)  # {'name': 'curder', 'hobby': 'coding'}
 ```
 
+## 创建空字典 {#create-empty-dict}
+
+- 使用花括号
+    ```python
+    d = {}
+
+    print(type(d))  # <class 'dict'>
+    print(d)  # {}
+    ```
+
+- 使用内置函数 `dict`
+    ```python
+    d = dict()
+
+    print(type(d))  # <class 'dict'>
+    print(d)  # {}
+    ```
+
+
 ## 字典生成式 {#dict-comprehension}
 
 当需要生成一定有规则的数据时，可以使用自定生成式生成字典。
