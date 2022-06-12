@@ -72,7 +72,7 @@ function sidebarGuide() {
         {
             text: "字典",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "创建字典", link: "/guide/dict/create"},
                 {text: "查询字典", link: "/guide/dict/find"},
