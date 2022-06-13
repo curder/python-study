@@ -102,5 +102,13 @@ function sidebarGuide() {
                 {text: "集合操作", link: "/guide/set/operation"},
             ],
         },
+        {
+            text: "字符串",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: "字符串操作", link: "/guide/str/operation"},
+            ],
+        }
     ];
 }
