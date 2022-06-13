@@ -222,3 +222,30 @@ print('abc1'.isalnum())  # True
 print('张三123'.isalnum())  # True
 print('abc!'.isalnum())  # False
 ```
+
+<a name="str-replacement-operation"></a>
+## 字符串替换操作
+
+`str.replace(old, new[, count])` 返回字符串的副本，其中出现的所有子字符串 `old` 都将被替换为 `new`。如果给出了可选参数 `count`，则只替换前 `count` 次出现。
+
+```python
+s = 'hello, world'
+
+print(s.replace('world', 'Python'))  # hello, Python
+print(s.replace('l', '1', 2))  # he11o, world
+```
+
+<a name="str-merge-operation"></a>
+## 字符串合并操作
+
+返回一个由 `iterable` 中的字符串拼接而成的字符串，可以用于字符串、列表或元组。
+
+```python
+s = ['hello', 'world', '!']
+print(' '.join(s))  # hello world !
+
+t = ('hello', 'world', '!')
+print(' '.join(t))  # hello world !
+
+print('*'.join("Hello"))  # H*e*l*l*o
+```
