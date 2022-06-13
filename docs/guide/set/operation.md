@@ -4,11 +4,10 @@
 
 | 数据操作 | 示意图 |
 |------|--|
-|  **交集**    |  ![Python中集合操作之交集](./images/intersection.png) |
-|  **并集**   | ![Python中集合操作之并集](./images/union.png) |
-|  **差集**    | ![Python中集合操作之差集](./images/difference.png) |
-|  **对称差集**   | ![Python中集合操作之对称差集](./images/symmetric-difference.png) |
-
+|  **交集**    |  ![Python中集合操作之交集](./images/intersection.png){width="140px"} |
+|  **并集**   | ![Python中集合操作之并集](./images/union.png){width="140px"} |
+|  **差集**    | ![Python中集合操作之差集](./images/difference.png){width="140px"} |
+|  **对称差集**   | ![Python中集合操作之对称差集](./images/symmetric-difference.png){width="140px"} |
 
 ## 交集 {#intersection}
 
