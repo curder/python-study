@@ -140,10 +140,10 @@ print(s.rsplit(sep=",", maxsplit=2))  # ['hello,world', 'hi', 'python']
 |--------------------------------------------------------------------------------------------|---------------------------------------|
 | [`isidentifier()`](https://docs.python.org/zh-cn/3/library/stdtypes.html#str.isidentifier) | 判断指定的字符串是否为合法的标识符                     |
 | [`isspace()`](https://docs.python.org/zh-cn/3/library/stdtypes.html#str.isspace)           | 判断指定的字符串是否全部由空白字符串组成（包含：回车、换行、水平制表符等） |
-| `isalpha()`                                                                                | 判断指定的字符串是否全部由字母组成                     |
-| `isdecimal()`                                                                              | 判断指定的字符串是否全部由十进制数字组成                  |
-| `isnumeric()`                                                                              | 判断指定的字符串是否全部由数字组成                     |
-| `isalnum()`                                                                                | 判断指定字符串是否全部由数字和字母组成                   |
+| [`isalpha()`](https://docs.python.org/zh-cn/3/library/stdtypes.html#str.isalpha)           | 判断指定的字符串是否全部由字母组成                     |
+| [`isdecimal()`](https://docs.python.org/zh-cn/3/library/stdtypes.html#str.isdecimal)       | 判断指定的字符串是否全部由十进制数字组成                  |
+| [`isnumeric()`](https://docs.python.org/zh-cn/3/library/stdtypes.html#str.isnumeric)       | 判断指定的字符串是否全部由数字组成                     |
+| [`isalnum()`](https://docs.python.org/zh-cn/3/library/stdtypes.html#str.isalnum)           | 判断指定字符串是否全部由数字和字母组成                   |
 
 ### isidentifier {#isidentifier}
 
@@ -165,4 +165,49 @@ print('\t'.isidentifier())  # False
 print('\t'.isspace())  # True
 print(' '.isspace())  # True
 print(''.isspace())  # False
+```
+
+### isalpha
+<a name="isalpha"></a>
+
+如果字符串中的所有字符都是字母，并且至少有一个字符，返回 `True` ，否则返回 `False`。
+
+```python
+print('abc'.isalpha())  # True
+print('张三1'.isalpha())  # False
+print('123'.isalpha())  # False
+```
+
+### isdecimal
+<a name="isdecimal"></a>
+
+如果字符串中的所有字符都是十进制字符且该字符串至少有一个字符，则返回 `True` ， 否则返回 `False` 。
+
+```python
+print('123'.isdecimal())  # True
+print('123四'.isdecimal())  # False
+print('IIV'.isdecimal())  # False
+```
+
+### isnumeric
+<a name="isnumeric"></a>
+
+如果字符串中至少有一个字符且所有字符均为数值字符则返回 `True` ，否则返回 `False` 。
+
+```python
+print('123'.isnumeric())  # True
+print('123四'.isnumeric())  # True
+print('IIV'.isnumeric())  # False
+```
+
+
+### isalnum
+<a name="isalnum"></a>
+
+如果字符串中的所有字符都是字母或数字且至少有一个字符，则返回 `True` ， 否则返回 `False` 。
+
+```python
+print('abc1'.isalnum())  # True
+print('张三123'.isalnum())  # True
+print('abc!'.isalnum())  # False
 ```
