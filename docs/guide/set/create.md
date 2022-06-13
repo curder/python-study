@@ -31,3 +31,14 @@ s = set()
 print(type(s))  # <class 'set'>
 print(s)  # set()
 ```
+
+
+## 集合生成式 {#set-comprehension}
+
+当需要生成一定有规则的集合数据时，可以使用集合生成式生成集合。 它的语法格式为：[ i for i in range(1, 11) ]
+
+```python
+s = {i for i in range(1, 10)}
+
+print(s)  # {1, 2, 3, 4, 5, 6, 7, 8, 9}
+```
