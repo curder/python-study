@@ -93,7 +93,7 @@ function sidebarGuide() {
         {
             text: "集合",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "创建集合", link: "/guide/set/create"},
                 {text: "查询集合", link: "/guide/set/find"},
