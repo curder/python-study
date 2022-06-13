@@ -153,8 +153,8 @@ print(s.rsplit(sep=",", maxsplit=2))  # ['hello,world', 'hi', 'python']
 print('hello, world'.isidentifier())  # False
 print('123'.isidentifier())  # False
 print(' '.isidentifier())  # False
-print(' '.isidentifier())  # False
 print(''.isidentifier())  # False
+print('\t'.isidentifier())  # False
 ```
 
 ### isspace {#isspace}
