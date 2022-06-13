@@ -47,7 +47,6 @@ print(s1.difference(s2))  # {1}
 print(s1 - s2)  # {1}
 ```
 
-
 ## 对称差集 {#symmetric-difference}
 
 对称差集集操作可以使用 `symmetric_difference()` 方法，也可以使用 `^` 运算符。
