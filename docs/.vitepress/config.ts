@@ -8,7 +8,7 @@ export default defineConfig({
     lastUpdated: true,
     themeConfig: {
 
-        logo: "/python-study/images/logo.svg",
+        logo: "/python-study/assets/images/logo.svg",
         lastUpdatedText: "最后更新时间",
         editLink: {
             repo: 'curder/python-study',
