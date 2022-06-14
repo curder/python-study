@@ -109,6 +109,7 @@ function sidebarGuide() {
             items: [
                 {text: "字符串操作", link: "/guide/str/operation"},
                 {text: "字符串比较", link: "/guide/str/compare"},
+                {text: "字符串切片", link: "/guide/str/slice"},
             ],
         }
     ];
