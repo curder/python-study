@@ -1,4 +1,4 @@
-import {defineConfig} from 'vitepress'
+import {defineConfig, withBase} from 'vitepress'
 
 export default defineConfig({
     lang: "zh-CN",
@@ -8,7 +8,7 @@ export default defineConfig({
     lastUpdated: true,
     themeConfig: {
 
-        logo: "/assets/images/logo.svg",
+        logo: withBase("/assets/images/logo.svg"),
         lastUpdatedText: "最后更新时间",
         editLink: {
             repo: 'curder/python-study',
