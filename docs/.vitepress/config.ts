@@ -6,9 +6,9 @@ export default defineConfig({
     title: "Python 学习",
     description: "Python 学习记录",
     lastUpdated: true,
-
     themeConfig: {
-        logo: "https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg",
+
+        logo: "/assets/images/logo.svg",
         lastUpdatedText: "最后更新时间",
         editLink: {
             repo: 'curder/python-study',
