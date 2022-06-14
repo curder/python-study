@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as n,a as p}from"./app.c3bf3399.js";const d='{"title":"pass\u8BED\u53E5","description":"","frontmatter":{},"headers":[],"relativePath":"guide/basic/pass.md","lastUpdated":1654856434000}',l={name:"guide/basic/pass.md"},e=p("",3),o=[e];function t(c,r,i,D,y,F){return n(),a("div",null,o)}var A=s(l,[["render",t]]);export{d as __pageData,A as default};
