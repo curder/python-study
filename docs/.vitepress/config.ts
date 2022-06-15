@@ -120,8 +120,9 @@ function sidebarGuide() {
             collapsed: false,
             items: [
                 {text: "函数的创建", link: "/guide/function/create"},
-                {text: "参数传递", link: "/guide/function/parameter-passing"},
+                {text: "函数参数传递", link: "/guide/function/parameter-passing"},
                 {text: "函数返回值", link: "/guide/function/return-value"},
+                {text: "函数参数定义", link: "/guide/function/parameter-definition"},
             ],
         },
     ];
