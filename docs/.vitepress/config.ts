@@ -105,7 +105,7 @@ function sidebarGuide() {
         {
             text: "字符串",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "字符串操作", link: "/guide/str/operation"},
                 {text: "字符串比较", link: "/guide/str/compare"},
