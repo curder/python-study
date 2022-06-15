@@ -113,6 +113,14 @@ function sidebarGuide() {
                 {text: "字符串格式化", link: "/guide/str/format"},
                 {text: "字符串编码转换", link: "/guide/str/conversion"},
             ],
-        }
+        },
+        {
+            text: "函数",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: "函数的创建", link: "/guide/function/create"},
+            ],
+        },
     ];
 }
