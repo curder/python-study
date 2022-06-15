@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as l}from"./app.495e5cb7.js";const C='{"title":"\u5207\u7247\u64CD\u4F5C","description":"","frontmatter":{},"headers":[],"relativePath":"guide/str/slice.md","lastUpdated":1655222337000}',p={name:"guide/str/slice.md"},o=l("",4),e=[o];function t(c,r,D,y,F,A){return n(),a("div",null,e)}var d=s(p,[["render",t]]);export{C as __pageData,d as default};
