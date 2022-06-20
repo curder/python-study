@@ -30,3 +30,22 @@ def factorial(number):
 
 print(factorial(10))  # 3628800
 ```
+
+## 斐波那契数列
+
+```python
+def fibonacci(number):
+    if number == 1:
+        return 1
+    elif number == 2:
+        return 1
+    else:
+        return fibonacci(number - 1) + fibonacci(number - 2)
+
+
+print(fibonacci(10))  # 55
+
+# 输出所有斐波那契数列的前10位数
+for i in range(1, 11):
+    print(fibonacci(i), end=" ")  # 1 1 2 3 5 8 13 21 34 55
+```
