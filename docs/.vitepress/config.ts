@@ -124,6 +124,7 @@ function sidebarGuide() {
                 {text: "函数参数传递", link: "/guide/function/parameter-passing"},
                 {text: "函数返回值", link: "/guide/function/return-value"},
                 {text: "函数参数定义", link: "/guide/function/parameter-definition"},
+                {text: "递归函数", link: "/guide/function/recursive-function"},
             ],
         },
     ];
