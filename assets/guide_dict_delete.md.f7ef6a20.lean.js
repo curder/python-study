@@ -1,0 +1,1 @@
+import{_ as s,c as a,o as n,a as o}from"./app.bbeef75d.js";const _='{"title":"\u5220\u9664\u5B57\u5178","description":"","frontmatter":{},"headers":[],"relativePath":"guide/dict/delete.md","lastUpdated":1655017931000}',e={name:"guide/dict/delete.md"},l=o("",4),p=[l];function t(c,r,D,d,F,y){return n(),a("div",null,p)}var A=s(e,[["render",t]]);export{_ as __pageData,A as default};
