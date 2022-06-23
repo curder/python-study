@@ -56,6 +56,7 @@ function sidebarGuide() {
                 {text: "循环结构", link: "/guide/basic/while-and-for-in"},
                 {text: "else语句", link: "/guide/basic/else"},
                 {text: "zip函数", link: "/guide/basic/function-zip"},
+                {text: "错误异常", link: "/guide/basic/exception"},
             ]
         },
         {
