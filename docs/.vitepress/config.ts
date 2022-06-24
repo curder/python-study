@@ -7,7 +7,7 @@ export default defineConfig({
     description: "Python 学习记录",
     lastUpdated: true,
     themeConfig: {
-        logo: "/logo.svg",
+        logo: "https://docs.python.org/zh-cn/3/_static/py.svg",
         siteTitle: "Python 学习",
         outlineTitle: "章节导航",
         lastUpdatedText: "最后更新时间",
