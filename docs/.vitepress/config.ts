@@ -136,7 +136,8 @@ function sidebarGuide() {
                 {text: "类", link: "/guide/oop/class"},
                 {text: "类的创建", link: "/guide/oop/create-class"},
                 {text: "创建对象", link: "/guide/oop/create-object"},
-                {text: "动态属性和方法", link: "/guide/oop/dynamic-properties-and-method"},
+                {text: "对象属性", link: "/guide/oop/object-properties"},
+                {text: "对象方法", link: "/guide/oop/object-methods"},
             ]
         }
     ];
