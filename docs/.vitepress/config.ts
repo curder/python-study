@@ -130,7 +130,7 @@ function sidebarGuide() {
         {
             text: "类与对象",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "面向对象", link: "/guide/oop/index"},
                 {text: "类", link: "/guide/oop/class"},
@@ -140,6 +140,14 @@ function sidebarGuide() {
                 {text: "对象方法", link: "/guide/oop/object-methods"},
                 {text: "对象拷贝", link: "/guide/oop/copy"},
             ]
-        }
+        },
+        {
+            text: "模块",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: "模块", link: "/guide/module/index"},
+            ],
+        },
     ];
 }
