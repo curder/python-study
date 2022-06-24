@@ -26,10 +26,37 @@ print(stu1.eating())
 
 通过重写 __len__() 方法，让内置函数 `len()` 的参数可以自定义类型。
 
+```python
+class Obj:
+    def __init__(self, name):
+        self.name = name
+
+    def __len__(self):
+        return len(self.name)
+
+obj1 = Obj("curder")
+
+print(len(obj1))  # 由于重写了 __len__ 方法，可以直接调用函数 len() 获取长度
+```
 
 ### __add__()
 
 通过重写 __add__() 方法，可使用自定义对象具有 "+" 功能。
+
+```python {5-6}
+class Obj:
+    def __init__(self, name):
+        self.name = name
+
+    def __add__(self, other):
+        return self.name + ' ' + other.name
+
+
+obj1 = Obj('ZhanSan')
+obj2 = Obj('LiSi')
+
+print(obj1 + obj2)  # ZhanSan LiSi
+```
 
 
 ### __new__()
