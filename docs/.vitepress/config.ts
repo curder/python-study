@@ -138,6 +138,7 @@ function sidebarGuide() {
                 {text: "创建对象", link: "/guide/oop/create-object"},
                 {text: "对象属性", link: "/guide/oop/object-properties"},
                 {text: "对象方法", link: "/guide/oop/object-methods"},
+                {text: "对象拷贝", link: "/guide/oop/copy"},
             ]
         }
     ];
