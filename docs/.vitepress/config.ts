@@ -7,13 +7,12 @@ export default defineConfig({
     description: "Python 学习记录",
     lastUpdated: true,
     themeConfig: {
-
-        logo: "/python-study/assets/images/logo.svg",
+        logo: "/assets/images/logo.svg",
+        siteTitle: "Python 学习",
+        outlineTitle: "xxx",
         lastUpdatedText: "最后更新时间",
         editLink: {
-            repo: 'curder/python-study',
-            branch: 'master',
-            dir: 'docs',
+            pattern: "https://github.com/curder/python-study/edit/master/docs/:path",
             text: '编辑它'
         },
         socialLinks: [
@@ -22,7 +21,7 @@ export default defineConfig({
         nav: nav(),
         sidebar: {
             "/guide": sidebarGuide(),
-        },
+        }
     }
 });
 
