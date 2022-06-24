@@ -9,7 +9,7 @@ export default defineConfig({
     themeConfig: {
         logo: "/assets/images/logo.svg",
         siteTitle: "Python 学习",
-        outlineTitle: "xxx",
+        outlineTitle: "章节导航",
         lastUpdatedText: "最后更新时间",
         editLink: {
             pattern: "https://github.com/curder/python-study/edit/master/docs/:path",
@@ -36,7 +36,7 @@ function sidebarGuide() {
         {
             text: "基础",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "安装", link: "/guide/basic/install-python"},
                 {text: "print函数", link: "/guide/basic/function-print"},
@@ -118,7 +118,7 @@ function sidebarGuide() {
         {
             text: "函数",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "函数的创建", link: "/guide/function/create"},
                 {text: "函数参数传递", link: "/guide/function/parameter-passing"},
@@ -127,5 +127,17 @@ function sidebarGuide() {
                 {text: "递归函数", link: "/guide/function/recursive-function"},
             ],
         },
+        {
+            text: "类与对象",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: "面向对象", link: "/guide/oop/index"},
+                {text: "类", link: "/guide/oop/class"},
+                {text: "类的创建", link: "/guide/oop/create-class"},
+                {text: "创建对象", link: "/guide/oop/create-object"},
+                {text: "动态属性和方法", link: "/guide/oop/dynamic-properties-and-method"},
+            ]
+        }
     ];
 }
