@@ -153,3 +153,27 @@ print(pi, ceil(10.22), floor(10.22))  # 3.141592653589793 11 10
 
 
 ### `logging` 模块
+
+
+## 第三方模块
+
+安装命令：`pip install module_name`，比如：`pip install schedule`。
+
+```python
+import time
+
+import schedule
+
+
+def job():
+    print('hello ~')
+
+
+schedule.every(3).seconds.do(job)
+
+while True:
+    schedule.run_pending()
+    time.sleep(1)
+
+job()
+```
