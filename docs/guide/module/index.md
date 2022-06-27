@@ -39,6 +39,10 @@ import module_name [as alias_name]
 from module_name import function/variable/class
 ``` 
 
+> **注意：** 
+> 1. 使用 `import` 方式进行导入时，只能在后面的参数跟包名/模块名。
+> 2. 使用 `from` 方式进行导入时，`import` 可以导入模块、方法、变量或类。
+
 - 使用`import`语句导入
 ```python
 import math

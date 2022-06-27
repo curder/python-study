@@ -142,11 +142,12 @@ function sidebarGuide() {
             ]
         },
         {
-            text: "模块",
+            text: "模块和包",
             collapsible: true,
             collapsed: false,
             items: [
                 {text: "模块", link: "/guide/module/index"},
+                {text: "包", link: "/guide/module/package"},
             ],
         },
     ];
