@@ -156,6 +156,7 @@ function sidebarGuide() {
             collapsed: false,
             items: [
                 {text: "文件编码", link: "/guide/os/encoding"},
+                {text: "常用方法", link: "/guide/os/method"},
             ],
         },
     ];
