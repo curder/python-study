@@ -249,3 +249,12 @@ print(' '.join(t))  # hello world !
 
 print('*'.join("Hello"))  # H*e*l*l*o
 ```
+
+## 判断字符串是否纯数字
+
+通过对字符串调用其 `isdigit()` 方法可以判断给定的字符串是否是纯数字。
+
+```python
+print(str(1).isdigit())  # True
+print('1a'.isdigit())  # False
+```
