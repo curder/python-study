@@ -258,3 +258,21 @@ print('*'.join("Hello"))  # H*e*l*l*o
 print(str(1).isdigit())  # True
 print('1a'.isdigit())  # False
 ```
+
+## 统计字符出现次数
+
+忽略大小写的统计字符串出现次数。
+
+```python
+def get_count(string, sub_str):
+    count = 0
+    for s in string:
+        if sub_str.upper() == s or sub_str.lower() == s:
+            count += 1
+    return count
+
+
+string = 'Hello World, Hello Python, Hello Golang, Hello php'
+sub_str = 'p'
+print(f'{sub_str} 字符在字符串中出现的次数为：{get_count(string, sub_str)}')  # p 字符在字符串中出现的次数为：3
+```
