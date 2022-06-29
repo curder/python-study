@@ -21,6 +21,7 @@ export default defineConfig({
         nav: nav(),
         sidebar: {
             "/guide": sidebarGuide(),
+            "/case": sidebarCase(),
         }
     }
 });
@@ -28,6 +29,7 @@ export default defineConfig({
 function nav() {
     return [
         {text: 'Guide', link: '/guide/basic/install-python', activeMatch: '/guide/'},
+        {text: 'Cases', link: '/case/io', activeMatch: '/case/'},
     ];
 }
 
@@ -163,3 +165,18 @@ function sidebarGuide() {
         },
     ];
 }
+
+
+function sidebarCase() {
+    return [
+        {
+            text: "磁盘IO",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: "IO", link: "/case/io"},
+            ],
+        }
+    ];
+}
+
