@@ -45,6 +45,14 @@ print(str4, type(str4))  # 输出：hello
 | 八进制 | 0，1，2，3，4，5，6，7 | 8 | 0o166 |
 | 十六进制 | 0，1，2，3，4，5，6，7，8，9，A，B，C，D，E，F | 16 | 0x76 |
 
+```python
+number = 95
+
+print(bin(number))  # 二进制    0b1011111
+print(oct(number))  # 八进制    0o137
+print(hex(number))  # 十六进制  0x5f
+```
+
 ## 浮点数 {#float}
 
 浮点数由整数部分和小数部分组成。
