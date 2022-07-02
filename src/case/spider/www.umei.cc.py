@@ -8,7 +8,8 @@
 pip3 install requests
 pip3 install beautifulsoup4
 """
-
+import os.path
+import ntpath
 import requests
 from bs4 import BeautifulSoup
 
@@ -26,7 +27,9 @@ main_page = BeautifulSoup(response.text, features='html.parser')
 # 通过find()方法查找一个元素, find_all() 方法查找所有匹配的元素
 a_list = main_page.find("ul", attrs={"class": ["pic-list"]}).find_all("a")
 
-n = 1
+# 如果不存在目录则创建目录
+if not os.path.exists('umei.cc/'):
+    os.mkdir('umei.cc/')
 
 for a in a_list:
     href = a.get('href')
@@ -34,16 +37,19 @@ for a in a_list:
         sub_page_url = base_url + href  # 添加域名
     else:
         continue
+
     # 发送请求到子页面
-    sub_response = requests.get(sub_page_url)
+    sub_response = requests.get(sub_page_url, headers=headers)
     sub_response.encoding = 'utf-8'
     sub_page = BeautifulSoup(sub_response.text, features='html.parser')
 
     # 查找图片src地址
     img_src_list = sub_page.find('section', attrs={"class": ["img-content"]}).find("img").get('src')
 
+    # 从图片地址获取文件名
+    filename = ntpath.basename(img_src_list)
+
     # 将图片下载到本地
-    with open('tu_%s.jpg' % n, mode="wb") as f:
-        f.write(requests.get(img_src_list).content)
-        print('download image success.')
-        n += 1
+    with open('umei.cc/%s' % filename, mode="wb") as f:
+        f.write(requests.get(img_src_list).content)  # 这里 content 获取的二进制数据
+        print(f'download image %s success.' % filename)
