@@ -27,16 +27,18 @@ main_page = BeautifulSoup(response.text, features='html.parser')
 # 通过find()方法查找一个元素, find_all() 方法查找所有匹配的元素
 a_list = main_page.find("ul", attrs={"class": ["pic-list"]}).find_all("a")
 
-# 如果不存在目录则创建目录
-if not os.path.exists('umei.cc/'):
-    os.mkdir('umei.cc/')
-
 for a in a_list:
     href = a.get('href')
     if str.startswith(href, '/'):
         sub_page_url = base_url + href  # 添加域名
     else:
         continue
+
+    # 如果不存在目录则创建目录
+    sub_page_id = str.split(str.split(sub_page_url, '/')[-1], '.')[0]  # 从地址栏上获取ID
+
+    if not os.path.exists('umei.cc/%s' % sub_page_id):
+        os.mkdir('umei.cc/%s' % sub_page_id)
 
     # 发送请求到子页面
     sub_response = requests.get(sub_page_url, headers=headers)
@@ -50,6 +52,29 @@ for a in a_list:
     filename = ntpath.basename(img_src_list)
 
     # 将图片下载到本地
-    with open('umei.cc/%s' % filename, mode="wb") as f:
+    with open('umei.cc/%s/%s' % (sub_page_id, filename), mode="wb") as f:
         f.write(requests.get(img_src_list).content)  # 这里 content 获取的二进制数据
         print(f'download image %s success.' % filename)
+
+    # 找当前图片的相关图片
+    other_image_number_span_txt = sub_page.find('div', attrs={"class": 'gongneng'}).find_all('span')[3].text
+    max_number = int(str.split(other_image_number_span_txt, '/')[1])
+    for number in range(2, max_number + 1):
+        url_prefix = ntpath.dirname(sub_page_url)
+        url_suffix_list = str.split(ntpath.basename(sub_page_url), '.')
+        url_suffix = url_suffix_list[0] + '_' + str(number) + '.' + url_suffix_list[1]
+        other_images_url = os.path.join(url_prefix, url_suffix)
+        print(other_images_url)
+        # 发送请求到其他相关图片子页面
+        other_sub_response = requests.get(other_images_url, headers=headers)
+        other_sub_response.encoding = 'utf-8'
+        other_sub_page = BeautifulSoup(other_sub_response.text, features='html.parser')
+
+        # 查找图片src地址
+        other_img_src_list = other_sub_page.find('section', attrs={"class": ["img-content"]}).find("img").get('src')
+
+        # 从图片地址获取文件名
+        other_filename = ntpath.basename(other_img_src_list)
+        with open('umei.cc/%s/%s' % (sub_page_id, other_filename), mode="wb") as f:
+            f.write(requests.get(other_img_src_list).content)  # 这里 content 获取的二进制数据
+            print(f'download image %s success.' % other_filename)
