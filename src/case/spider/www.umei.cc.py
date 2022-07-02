@@ -3,6 +3,7 @@
 
 1. 使用 requests 发送请求，从服务器获取到服务器
 2. BeautifulSoup 解析整个页面的源代码
+3. 下载图片到当前目录
 
 pip3 install requests
 pip3 install beautifulsoup4
@@ -12,8 +13,11 @@ import requests
 from bs4 import BeautifulSoup
 
 base_url = 'https://www.umei.cc'
+headers = {
+    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.115 Safari/537.36'
+}  # 设置请求头
 
-response = requests.get(base_url + '/meinvtupian/meinvxiezhen/')
+response = requests.get(base_url + '/meinvtupian/meinvxiezhen/', headers=headers)
 response.encoding = 'utf-8'  # 设置响应字符集，避免乱码
 
 # 解析HTML内容，获取超链接
