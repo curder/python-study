@@ -2,12 +2,17 @@
 分析500彩票网数据
 1. 获取csv文件中的需要的列
 2. 获取对应列的号码出现的总数
-3. 将红球和蓝球出现的次数反应在图表上
+3. 将红球和蓝球出现的次数反映在图表上
 
+步骤：
+1. 使用上一节 [爬取彩票网彩票数据](./datachart.500.com.py) 生成的数据
+2. 使用 pandas 对红球和蓝球出现的对应数字出现次数进行统计
+3. 使用 matplotlib.pyplot 对统计的结果进行画图展示
 
 pip3 install pandas
 pip3 install matplotlib.pyplot
 
+时间：2022-07-04
 """
 
 import pandas as pd
