@@ -9,3 +9,4 @@
 - [计算数字范围中所有偶数](./calculate-all-even-numbers-in-the-range.py)
 - [移除列表中的多个元素](./remove-multiple-elements-from-a-list.py)
 - [对列表元素去重](./deduplicate-list-elements.py)
+- [简单列表元素排序](./simple-list-element-sorting.py)
