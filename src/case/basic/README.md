@@ -10,3 +10,4 @@
 - [移除列表中的多个元素](./remove-multiple-elements-from-a-list.py)
 - [对列表元素去重](./deduplicate-list-elements.py)
 - [简单列表元素排序](./simple-list-element-sorting.py)
+- [实现学生成绩排序](./ranking-of-student-grades.py)
