@@ -13,3 +13,4 @@
 - [实现学生成绩排序](./ranking-of-student-grades.py)
 - [读取学生成绩文件排序数据](./read-student-grade-file-sorting-data.py)
 - [统计学生成绩最高分、最低分和平均分](statistics-of-students-highest-lowest-and-average-scores.py)
+- [统计单词出现次数](./count-word-occurrences.py)
