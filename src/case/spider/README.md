@@ -26,6 +26,7 @@
 3. 初始化 csv 对象
 4. 保存到 500.com-history.csv 文件中
 
+
 ## 分析500彩票网数据
 
 1. 获取csv文件中的需要的列
@@ -36,3 +37,13 @@
 1. 使用上一节 [爬取彩票网彩票数据](./datachart.500.com.py) 生成的数据
 2. 使用 pandas 对红球和蓝球出现的对应数字出现次数进行统计
 3. 使用 matplotlib.pyplot 对统计的结果进行画图展示
+
+## 获取 51job.com 站点的 Python 岗位招聘信息
+
+**注意：** Mac端电脑下载 [google chrome driver](https://chromedriver.storage.googleapis.com/index.html)，解压后将可执行包放在 `/usr/local/bin` （M1的电脑可以放在 `/opt/homebrew/bin`）目录下，并需要在电脑的 "系统偏好设置" -> "安全性与隐私" -> "通用" 中允许软件运行。
+
+1. 使用 selenium 发送请求到51job的首页
+2. 点击进入到职位列表页
+2. 找到职位列表中需要的字段'职位名称', '公司名称', '薪资待遇', '发布日期'
+3. 循环内容并保存到 ./51job.com.csv 文件
+>>>>>>> a72ed39 (Add 51job.com spider)
