@@ -17,3 +17,4 @@
 - [统计目录下所有文件大小](./count-the-size-of-all-files-in-the-directory.py)
 - [按文件后缀整理文件夹](./organize-folders-by-file-suffix.py)
 - [递归搜索目录中最大的文件](./recursively-search-for-largest-file-in-a-directory.py)
+- [计算班级的高分低分和平均分](statistics-of-many-course-highest-lowest-and-average-scores.py)
