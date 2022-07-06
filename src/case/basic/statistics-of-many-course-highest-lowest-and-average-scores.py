@@ -22,7 +22,7 @@
 输出不同课程的最高分，最低分和平均分分值
 """
 
-course_grades = {}  # 键为课程，值为学生列表
+course_grades = {}  # 键为课程，值为学生分数列表
 
 with open('./course-scores-input.txt', mode='r', encoding='utf-8') as f:
     for line in f:
