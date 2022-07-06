@@ -19,3 +19,4 @@
 - [按文件后缀整理文件夹](./organize-folders-by-file-suffix.py)
 - [递归搜索目录中最大的文件](./recursively-search-for-largest-file-in-a-directory.py)
 - [实现不同文件的数据关联](./realize-data-association-of-different-files.py)
+- [批量合并多个文本文件](./batch-merge-multiple-text-files.py)
