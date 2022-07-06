@@ -15,3 +15,4 @@
 - [统计学生成绩最高分、最低分和平均分](statistics-of-students-highest-lowest-and-average-scores.py)
 - [统计单词出现次数](./count-word-occurrences.py)
 - [统计目录下所有文件大小](./count-the-size-of-all-files-in-the-directory.py)
+- [按文件后缀整理文件夹](./organize-folders-by-file-suffix.py)
