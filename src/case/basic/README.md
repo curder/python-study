@@ -14,3 +14,4 @@
 - [读取学生成绩文件排序数据](./read-student-grade-file-sorting-data.py)
 - [统计学生成绩最高分、最低分和平均分](statistics-of-students-highest-lowest-and-average-scores.py)
 - [统计单词出现次数](./count-word-occurrences.py)
+- [统计目录下所有文件大小](./count-the-size-of-all-files-in-the-directory.py)
