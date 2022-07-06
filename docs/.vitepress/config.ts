@@ -58,6 +58,7 @@ function sidebarGuide() {
                 {text: "else语句", link: "/guide/basic/else"},
                 {text: "zip函数", link: "/guide/basic/function-zip"},
                 {text: "错误异常", link: "/guide/basic/exception"},
+                {text: "正则表达式", link: "/guide/basic/re"},
             ]
         },
         {
