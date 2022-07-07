@@ -9,7 +9,7 @@
 - `BeautifulSoup`
 
 
-## 爬取 [lagou.com](https://lagou.com) 站的岗位信息
+## [爬取 lagou.com 站的岗位信息](./www.lagou.com.py)
 
 **注意：** Mac端电脑下载 [google chrome driver](https://chromedriver.storage.googleapis.com/index.html)，解压后将可执行包放在 `/usr/local/bin` 目录下，并需要在电脑的 "系统偏好设置" -> "安全性与隐私" -> "通用" 中允许软件运行。
 
@@ -17,7 +17,7 @@
 2. 使用正则匹配页面内容
 3. 循环内容并保存到文件
 
-## 爬取彩票网彩票数据
+## [爬取彩票网彩票数据](./www.datachart.500.com.py)
 
 爬取500彩票网双色球近100期的开奖信息历史数据，页面地址：https://datachart.500.com/ssq/history/history.shtml
 
@@ -27,7 +27,7 @@
 4. 保存到 500.com-history.csv 文件中
 
 
-## 分析500彩票网数据
+## [分析500彩票网数据](./www.500.com.py)
 
 1. 获取csv文件中的需要的列
 2. 获取对应列的号码出现的总数
@@ -38,7 +38,7 @@
 2. 使用 pandas 对红球和蓝球出现的对应数字出现次数进行统计
 3. 使用 matplotlib.pyplot 对统计的结果进行画图展示
 
-## 获取 51job.com 站点的 Python 岗位招聘信息
+## [获取 51job.com 站点的 Python 岗位招聘信息](./www.51job.com.py)
 
 **注意：** Mac端电脑下载 [google chrome driver](https://chromedriver.storage.googleapis.com/index.html)，解压后将可执行包放在 `/usr/local/bin` （M1的电脑可以放在 `/opt/homebrew/bin`）目录下，并需要在电脑的 "系统偏好设置" -> "安全性与隐私" -> "通用" 中允许软件运行。
 
@@ -47,7 +47,7 @@
 2. 找到职位列表中需要的字段'职位名称', '公司名称', '薪资待遇', '发布日期'
 3. 循环内容并保存到 ./51job.com.csv 文件
 
-## 豆瓣电影 Top 250
+## [豆瓣电影 Top 250](./movie.douban.com-top250.py)
 
 1. 获取页面 https://movie.douban.com/top250 源代码
 2. 使用 re 正则模块获取需要信息：影片名、发布年份、国家、类型、评分、评价人数
