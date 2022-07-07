@@ -25,7 +25,10 @@ def fetch(url):
     }  # 请求头
     # 发送请求并获得响应内容
     response = requests.get(url, headers=headers)  # 发送请求，获取响应
-    response.encoding = 'utf-8'  # 设置响应字符集
+    # 从响应中获取到字符集编码
+    regex_result = re.compile('<meta http-equiv="Content-Type" content="text/html; charset=(?P<encoding>.*?)">',
+                              re.S).search(response.text)
+    response.encoding = regex_result.group('encoding')  # 设置响应字符集，避免乱码
     return response.text
 
 
