@@ -8,6 +8,17 @@
 - `requests`
 - `BeautifulSoup`
 
+## [优美图库 - 使用协程获取图片](./www.umei.cc-coroutine.py)
+
+1. 使用 asyncio 创建协程并添加下载任务
+
+2. 使用 aiohttp 模块发送请求，异步读取响应，并使用 aiofiles 异步写入到文件
+
+- `pip3 install asyncio`
+
+- `pip3 install aiohttp`
+
+- `pip3 install aiofiles`
 
 ## [爬取 lagou.com 站的岗位信息](./www.lagou.com.py)
 
