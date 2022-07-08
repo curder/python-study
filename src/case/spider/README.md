@@ -59,6 +59,20 @@
 - `csv` 内置
 - `os` 内置
 
+## [豆瓣电影 Top 250 使用线程池](./movie.douban.com-top250-thread-pool.py)
+
+1. 获取页面 https://movie.douban.com/top250 源代码
+2. 使用 re 正则模块获取需要信息：影片名、发布年份、国家、类型、评分、评价人数
+3. 使用线程池下载分页数据
+4. 将需要的信息保存到csv文件
+
+使用库：
+- `requests` 使用 `pip3 install requests` 命令下载
+- `re` 内置
+- `csv` 内置
+- `os` 内置
+- `concurrent.futures` 内置
+
 ## [获取 17k小说网 我的书架图书列表](./www.17k.com.py)
 
 1. 初始化一个session会话

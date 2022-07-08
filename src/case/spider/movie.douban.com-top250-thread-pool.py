@@ -9,7 +9,6 @@ pip3 install requests
 """
 import os
 import re
-import time
 
 import requests
 import csv
