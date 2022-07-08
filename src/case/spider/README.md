@@ -117,3 +117,17 @@
 > pip3 install aiofiles
 > pip3 install aiohttp
 > ```
+ 
+## [获取 91看剧 - 超级播视频源](./www.91kanju.com-chaojibo.py)
+
+流程：
+1. 访问视频播放页获取源代码，比如：http://91kanju.com/vod-play/63125-1-1.html
+2. 从源代码中获取 m3u8 的请求地址
+3. 下载 m3u8 文件到本地
+4. 读取并分析 m3u8 文件，下载视频到本地
+5. 合并视频碎片为 mp4 文件
+
+pip3 install requests
+pip3 install asyncio
+pip3 install aiofiles
+pip3 install aiohttp 
