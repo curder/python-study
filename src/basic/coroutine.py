@@ -3,8 +3,9 @@
 
 协程程序的运行需要 asyncio 模块的支持，使用 `asyncio.run()` 运行协程对象
 
-一般的IO操作会阻塞进程，比如： time.sleep(), requests.get() 等
+一般的IO操作会阻塞进程，比如： time.sleep(), requests.get(), input() 等，当程序遇到IO操作时，可以选择性的切换到其他任务。
 """
+
 import asyncio
 import time
 
@@ -31,13 +32,12 @@ async def func3():
 
 
 async def main():
-    task1 = asyncio.create_task(func1())
-    task2 = asyncio.create_task(func2())
-    task3 = asyncio.create_task(func3())
-
-    await task1
-    await task2
-    await task3
+    tasks = [
+        asyncio.create_task(func1()),
+        asyncio.create_task(func2()),
+        asyncio.create_task(func3()),
+    ]
+    await asyncio.wait(tasks)
 
 
 if __name__ == '__main__':
