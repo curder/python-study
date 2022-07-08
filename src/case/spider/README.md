@@ -101,3 +101,19 @@
 
 分析视频详情页，服务端没有第一时间返回视频地址，需要请求页面的 `/videoStatus.jsp` 的响应会生成一个临时的视频地址和系统时间，通过参数拼接将系统时间替换为 cont_ + 地址栏的 contID 参数。
 其中，在请求 `/videoStatus.jsp` 接口时需要注意在请求头中传递 Referer 参数，否则会返回异常结果。
+
+## [获取百度小说中"西游记"](./dushu.baidu.com.py)
+
+1. 使用同步请求 `/getCatalog` 获取对应小说的所有章节
+2. 使用异步请求 `/getChapterContent` 获取文章内容并下载到本地
+3. 使用异步 aiofiles 将内存存储到文本
+
+- 初始页面URL：https://dushu.baidu.com/pc/detail?gid=4306063500  点击页面章节中"查看更多"按钮可以看到所有章节URL
+- 所有章节URL：https://dushu.baidu.com/api/pc/getCatalog?data={"book_id":"4306063500"} 点击任意章节可以看到对应章节内容URL
+- 章节内容URL：https://dushu.baidu.com/api/pc/getChapterContent?data={"book_id":"4306063500","cid":"4306063500|1569782244","need_bookinfo":1}
+
+> ```bash
+> pip3 install asyncio
+> pip3 install aiofiles
+> pip3 install aiohttp
+> ```
