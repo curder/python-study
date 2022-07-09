@@ -92,7 +92,7 @@ async def download_m3u8(path, number, url):
     :return: None
     """
     name = f"{path}/{number}.ts"
-    async with aiohttp.ClientSession() as session:
+    async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=60 * 60 * 24)) as session:
         async with session.get(url) as response:
             content = await response.content.read()
             async with aiofiles.open(name, mode="wb") as f:
