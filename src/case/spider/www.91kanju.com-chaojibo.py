@@ -83,7 +83,7 @@ def get_m3u8_content(path, m3u8_name):
         return m3u8_url_list
 
 
-async def download_m3u8(path, number, url):
+async def download_m3u8(session, path, number, url):
     """
     下载m3u8文件
     :param path: 文件保存路径
@@ -92,11 +92,10 @@ async def download_m3u8(path, number, url):
     :return: None
     """
     name = f"{path}/{number}.ts"
-    async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=60 * 60 * 24)) as session:
-        async with session.get(url) as response:
-            content = await response.content.read()
-            async with aiofiles.open(name, mode="wb") as f:
-                await f.write(content)
+    async with session.get(url) as response:
+        content = await response.content.read()
+        async with aiofiles.open(name, mode="wb") as f:
+            await f.write(content)
 
 
 async def main(path, m3u8_urls):
@@ -109,11 +108,12 @@ async def main(path, m3u8_urls):
     tasks = []
 
     number = 1
-    for url in m3u8_urls:
-        tasks.append(asyncio.create_task(download_m3u8(path, number, url)))
-        number += 1
+    async with aiohttp.ClientSession(timeout=aiohttp.ClientTimeout(total=60 * 60 * 24)) as session:
+        for url in m3u8_urls:
+            tasks.append(asyncio.create_task(download_m3u8(session, path, number, url)))
+            number += 1
 
-    await asyncio.wait(tasks)
+        await asyncio.wait(tasks)
 
 
 if __name__ == '__main__':
