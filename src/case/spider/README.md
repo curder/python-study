@@ -127,10 +127,12 @@
 4. 读取并分析 m3u8 文件，下载视频到本地
 5. 合并视频碎片为 mp4 文件
 
+```bash
 pip3 install requests
 pip3 install asyncio
 pip3 install aiofiles
 pip3 install aiohttp 
+```
 
 ## [剧迷站 下载 "越狱" 第一季 01](./gimy.tv.py)
 
