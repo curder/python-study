@@ -48,12 +48,23 @@ def get_m3u8_url(url):
 
 
 def download_m3u8_file(url, path):
+    """
+    下载m3u8文件
+    :param url: m3u8文件
+    :param path: 文件存储路径
+    :return: None
+    """
     response = requests.get(url, headers=headers)
     with open(path, mode='wb') as f:
         f.write(response.content)
 
 
-def get_first_m3u8_file(url):
+def get_m3u8_file(url):
+    """
+    获取 m3u8 文件
+    :param url: m3u8文件
+    :return:
+    """
     # 发送请求获取m3u8内容
     download_m3u8_file(url, first_m3u8_path)
     second_m3u8_url = f'{urlparse(url).scheme}://{urlparse(url).netloc}'
@@ -69,6 +80,10 @@ def get_first_m3u8_file(url):
 
 
 def get_key():
+    """
+    获取ts片段加密的key
+    :return:
+    """
     if not os.path.exists(key_path):
         with open(second_m3u8_path, mode='r', encoding='utf-8') as f:
             key_url = re.compile('URI="(?P<key>.*?)"', re.S).search(f.read()).group('key')
@@ -79,6 +94,12 @@ def get_key():
 
 
 async def decrypt_ts(name, key):
+    """
+    解密 ts 片段
+    :param name: 原 ts 片段的名称
+    :param key: 密钥
+    :return:
+    """
     aes = AES.new(key=key, IV=b'0000000000000000', mode=AES.MODE_CBC)
     async with aiofiles.open(f'{video_path}/{name}', mode='rb') as rf:
         async with aiofiles.open(f'{video_path}/tmp_{name}.ts', mode='wb') as wf:
@@ -88,6 +109,11 @@ async def decrypt_ts(name, key):
 
 
 async def aio_decrypt(key):
+    """
+    创建解密协程
+    :param key: 密钥
+    :return:
+    """
     tasks = []
     async with aiofiles.open(second_m3u8_path, mode='r') as f:
         async for line in f:
@@ -102,6 +128,13 @@ async def aio_decrypt(key):
 
 
 async def download_ts_file(session, url, name):
+    """
+    下载 ts 文件
+    :param session: 异步请求 session
+    :param url: 请求URL
+    :param name: 保存名称
+    :return:
+    """
     async with session.get(url) as response:
         async with aiofiles.open(f'{video_path}/{name}', mode='wb') as f:
             await f.write(await response.content.read())
@@ -144,7 +177,7 @@ def main(url):
     # 1. 从视频播放页获取源代码，分析出m3u8地址
     m3u8_url = get_m3u8_url(url)
     # 2. 下载 m3u8 文件内容，转而下载另一个目标 m3u8 文件
-    get_first_m3u8_file(m3u8_url)
+    get_m3u8_file(m3u8_url)
     # 3. 下载视频
     asyncio.run(download_video())
     # 4. 下载视频需要的密钥
@@ -156,5 +189,5 @@ def main(url):
 
 
 if __name__ == '__main__':
-    url = 'https://gimy.tv/ep-8Lmab-6-2.html'  # 视频播放页面
+    url = 'https://gimy.tv/ep-8Lmab-6-1.html'  # 视频播放页面
     main(url)
