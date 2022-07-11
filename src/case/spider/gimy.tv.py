@@ -32,7 +32,7 @@ headers = {
     'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) '
                   'AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
 }
-base_path = './越狱/02'
+base_path = './越狱/01'
 first_m3u8_path = f'{base_path}/first.m3u8.txt'
 second_m3u8_path = f'{base_path}/second.m3u8.txt'
 video_path = f'{base_path}/ts'
@@ -180,6 +180,8 @@ def main(url):
     get_m3u8_file(m3u8_url)
     # 3. 下载视频
     asyncio.run(download_video())
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(download_video())
     # 4. 下载视频需要的密钥
     key = get_key()
     # 5. 对下载的视频进行解密操作
