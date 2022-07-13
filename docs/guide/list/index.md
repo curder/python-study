@@ -17,3 +17,11 @@ print(list([1, True, "hello", 'world', False, 0.1, ]))  # [1, True, 'hello', 'wo
 3. 列表可以存储重复数据
 4. 任意数据类型混存
 5. 根据需要动态分配和回收内存
+
+## 获取列表长度
+
+跟获取字符串长度一样，可以使用 `len()` 函数获取列表的长度
+
+```python
+print(len([1, True, "hello", 'world', False, 0.1, ]))  # 6
+```
