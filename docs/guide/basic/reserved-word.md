@@ -2,10 +2,11 @@
 
 ## 打印出当前保留字
 
-使用[keyword包](https://docs.python.org/3.10/library/keyword.html#module-keyword)的 `kwlist` 属性可以看到当前系统的所有保留字。
+使用 [keyword 包](https://docs.python.org/zh-cn/3.10/library/keyword.html#module-keyword)的 `kwlist` 属性可以看到当前系统的所有保留字。
 
 ```python
 import keyword
+
 print(keyword.kwlist)
 
 # False
