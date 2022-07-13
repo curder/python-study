@@ -44,7 +44,7 @@ function sidebarGuide() {
                 {text: "print函数", link: "/guide/basic/function-print"},
                 {text: "转义字符", link: "/guide/basic/escape-character"},
                 {text: "系统保留字", link: "/guide/basic/reserved-word"},
-                {text: "变量的定义和使用", link: "/guide/basic/variable"},
+                {text: "变量", link: "/guide/basic/variable"},
                 {text: "变量作用域", link: "/guide/basic/variable-scope"},
                 {text: "数据类型", link: "/guide/basic/type-of-data"},
                 {text: "数据类型转换", link: "/guide/basic/data-type-conversion"},
