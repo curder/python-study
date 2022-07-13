@@ -1,5 +1,3 @@
-<a name="recursive-function"></a>
-
 # 递归函数
 
 ## 什么是递归函数

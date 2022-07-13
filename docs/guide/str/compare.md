@@ -1,4 +1,3 @@
-<a name="top"></a>
 # 比较操作
 
 字符串的比较操作运算符有：`>`、`>=`、`<`、`<=`、`==` 和 `!=`。
@@ -20,5 +19,5 @@ print(chr(98))  # b
 str1 = str2 = 'hello'
 str3 = 'hello'  # 字符串驻留，不会指向新的内存空间
 
-print(str1 is str2, str1 is str3, id(str1), id(str2), id(str3)) # True True 4431062768 4431062768 4431062768
+print(str1 is str2, str1 is str3, id(str1), id(str2), id(str3))  # True True 4431062768 4431062768 4431062768
 ```

@@ -1,5 +1,3 @@
-<a name="function-parameter-passing"></a>
-
 # 函数参数传递
 
 - 行参：一些函数在定义时可能需要传递参数，这些参数成为形参；

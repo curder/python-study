@@ -1,7 +1,5 @@
-<a name="top"></a>
 # 字符串常用操作
 
-<a name="str-query-operation"></a>
 ## 字符串的查询操作
 
 字符串查询操作有：`find()`、`reindex()`、`find()` 和 `rfind()`。
@@ -13,7 +11,6 @@
 | `find()`    | 查找子字符串 `substr` 第一次出现的位置，如果查找的子字符串不存在时，则返回 `-1`             |
 | `rfind()`   | 查找子字符串 `substr` 最后一次出现的位置，如果查找的子字符串不存在时，则返回 `-1`            |
 
-<a name="sub-str-does-exists"></a>
 ### 子字符串存在的情况
 
 ```python
@@ -26,7 +23,6 @@ print(s.rindex('lo'))  # 16
 print(s.rfind('lo'))  # 16
 ```
 
-<a name="sub-str-does-not-exists"></a>
 ### 子字符串不存在的情况
 
 ```python
@@ -39,7 +35,6 @@ print(s.rindex('ls'))  # ValueError: substring not found
 print(s.rfind('ls'))  # -1
 ```
 
-<a name="string-case-conversion"></a>
 ## 字符串大小写转换
 
 | 方法名 | 作用 |
@@ -67,7 +62,6 @@ s = "hello world"
 print(s.title())  # Hello World
 ```
 
-<a name="string-content-alignment"></a>
 ## 字符串内容对齐
 
 | 方法名称 | 作用 |
@@ -98,7 +92,6 @@ print(s.zfill(10))  # hello world
 print('-1234'.zfill(10))  # -000001234
 ```
 
-<a name="split-string-operation"></a>
 ## 字符串分割操作
 
 | 方法名称 | 作用 |
@@ -108,7 +101,6 @@ print('-1234'.zfill(10))  # -000001234
 | `rsplit()` | 从字符串的** 右边**开始分割，默认分割符是空格，返回的值为列表。可选参数：<br />1. 通过 `spe` 参数修改分割符<br /> 2. 通过参数 `maxsplit`
 指定分割符最大分割次数，余下未分割的字符串会左右列表的一部分 |
 
-<a name="split"></a>
 ### split
 
 ```python
@@ -125,7 +117,6 @@ s = 'hello,world,hi,python'
 print(s.split(sep=",", maxsplit=2))  # ['hello', 'world', 'hi,python']
 ```
 
-<a name="rsplit"></a>
 ### rsplit
 
 ```python
@@ -143,8 +134,7 @@ s = 'hello,world,hi,python'
 print(s.rsplit(sep=",", maxsplit=2))  # ['hello,world', 'hi', 'python']
 ```
 
-<a name="judging-str-Operations"></a>
-## 判断字符串操作 
+## 判断字符串操作
 
 | 方法名称                                                                                       | 作用                                    |
 |--------------------------------------------------------------------------------------------|---------------------------------------|
@@ -155,7 +145,6 @@ print(s.rsplit(sep=",", maxsplit=2))  # ['hello,world', 'hi', 'python']
 | [`isnumeric()`](https://docs.python.org/zh-cn/3/library/stdtypes.html#str.isnumeric)       | 判断指定的字符串是否全部由数字组成                     |
 | [`isalnum()`](https://docs.python.org/zh-cn/3/library/stdtypes.html#str.isalnum)           | 判断指定字符串是否全部由数字和字母组成                   |
 
-<a name="isidentifier"></a>
 ### isidentifier
 
 如果字符串是有效的标识符，返回 `True`。
@@ -168,7 +157,6 @@ print(''.isidentifier())  # False
 print('\t'.isidentifier())  # False
 ```
 
-<a name="isspace"></a>
 ### isspace
 
 如果字符串中只有空白字符且至少有一个字符则返回 `True` ，否则返回 `False` 。
@@ -179,7 +167,6 @@ print(' '.isspace())  # True
 print(''.isspace())  # False
 ```
 
-<a name="isalpha"></a>
 ### isalpha
 
 如果字符串中的所有字符都是字母，并且至少有一个字符，返回 `True` ，否则返回 `False`。
@@ -190,7 +177,6 @@ print('张三1'.isalpha())  # False
 print('123'.isalpha())  # False
 ```
 
-<a name="isdecimal"></a>
 ### isdecimal
 
 如果字符串中的所有字符都是十进制字符且该字符串至少有一个字符，则返回 `True` ， 否则返回 `False` 。
@@ -201,7 +187,6 @@ print('123四'.isdecimal())  # False
 print('IIV'.isdecimal())  # False
 ```
 
-<a name="isnumeric"></a>
 ### isnumeric
 
 如果字符串中至少有一个字符且所有字符均为数值字符则返回 `True` ，否则返回 `False` 。
@@ -212,7 +197,6 @@ print('123四'.isnumeric())  # True
 print('IIV'.isnumeric())  # False
 ```
 
-<a name="isalnum"></a>
 ### isalnum
 
 如果字符串中的所有字符都是字母或数字且至少有一个字符，则返回 `True` ， 否则返回 `False` 。
@@ -223,7 +207,6 @@ print('张三123'.isalnum())  # True
 print('abc!'.isalnum())  # False
 ```
 
-<a name="str-replacement-operation"></a>
 ## 字符串替换操作
 
 `str.replace(old, new[, count])` 返回字符串的副本，其中出现的所有子字符串 `old` 都将被替换为 `new`。如果给出了可选参数 `count`，则只替换前 `count` 次出现。
@@ -235,7 +218,6 @@ print(s.replace('world', 'Python'))  # hello, Python
 print(s.replace('l', '1', 2))  # he11o, world
 ```
 
-<a name="str-merge-operation"></a>
 ## 字符串合并操作
 
 返回一个由 `iterable` 中的字符串拼接而成的字符串，可以用于字符串、列表或元组。

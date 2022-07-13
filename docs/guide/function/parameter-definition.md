@@ -1,8 +1,4 @@
-<a name="parameter-definition"></a>
-
 # 函数参数定义
-
-<a name="default-parameter"></a>
 
 ## 默认值参数
 
@@ -36,6 +32,7 @@ fun(1, 2, 3, "hello world")  # (1, 2, 3, 'hello world')
 ```python
 def fun(**args):
     print(args)
+
 
 fun(a=1, b=2, c=3, d="hello world")  # {'a': 1, 'b': 2, 'c': 3, 'd': 'hello world'}
 ```

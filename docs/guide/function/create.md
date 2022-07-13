@@ -1,4 +1,3 @@
-<a name="create-function"></a>
 # 函数的创建
 
 ```
@@ -13,6 +12,7 @@ def 函数名([函数参数]):
 def calc(a, b):
     result = a + b
     return result
+
 
 print(calc(10, 20))  # 30
 ```

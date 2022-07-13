@@ -1,7 +1,5 @@
-<a name="exception"></a>
 # 错误异常
 
-<a name="customize-exception-types"></a>
 ## 常见异常类型
 
 | 异常类型 | 描述 |
