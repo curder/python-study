@@ -1,4 +1,4 @@
-# 集合的操作 {#set-operation}
+# 集合的操作
 
 集合最常做的操作就是进行 交集 `intersection` 、并集 `union` 、差集 `difference` 以及对称差集 `symmetric_difference` 运算。
 
@@ -9,7 +9,7 @@
 |  **差集**    | ![Python中集合操作之差集](./images/difference.png){width="140px"} |
 |  **对称差集**   | ![Python中集合操作之对称差集](./images/symmetric-difference.png){width="140px"} |
 
-## 交集 {#intersection}
+## 交集
 
 交集操作可以使用 `intersection()` 方法，也可以使用 `&` 运算符。
 
@@ -22,7 +22,7 @@ print(s1.intersection(s2))  # {2, 3, 4}
 print(s1 & s2)  # {2, 3, 4}
 ```
 
-## 并集 {#union}
+## 并集
 
 并集操作可以使用 `union()` 方法，也可以使用 `|` 运算符。
 
@@ -35,7 +35,7 @@ print(s1.union(s2))  # {1, 2, 3, 4, 5, 6}
 print(s1 | s2)  # {1, 2, 3, 4, 5, 6}
 ```
 
-## 差集 {#difference}
+## 差集
 
 差集操作可以使用 `difference()` 方法，也可以使用 `-` 运算符。
 
@@ -47,7 +47,7 @@ print(s1.difference(s2))  # {1}
 print(s1 - s2)  # {1}
 ```
 
-## 对称差集 {#symmetric-difference}
+## 对称差集
 
 对称差集集操作可以使用 `symmetric_difference()` 方法，也可以使用 `^` 运算符。
 

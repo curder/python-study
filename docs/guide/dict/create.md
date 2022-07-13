@@ -1,6 +1,6 @@
-# 创建字典 {#top}
+# 创建字典
 
-## 字典的创建 {#create-dict}
+## 字典的创建
 
 字典的创建有两种方式：
 
@@ -17,7 +17,7 @@ d = dict(name="curder", hobby="coding")
 print(d)  # {'name': 'curder', 'hobby': 'coding'}
 ```
 
-## 创建空字典 {#create-empty-dict}
+## 创建空字典
 
 - 使用花括号
     ```python
@@ -36,7 +36,7 @@ print(d)  # {'name': 'curder', 'hobby': 'coding'}
     ```
 
 
-## 字典生成式 {#dict-comprehension}
+## 字典生成式
 
 当需要生成一定有规则的数据时，可以使用自定生成式生成字典。
 

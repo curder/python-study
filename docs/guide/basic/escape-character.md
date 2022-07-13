@@ -1,6 +1,6 @@
-# 转义字符 {#escape-character}
+# 转义字符
 
-## 无法直接表示的字符 {#characters-that-cannot-be-directly–represented}
+## 无法直接表示的字符
 
 | 转义字符 | 表达的字符 | 备注                   |
 |------|-------|----------------------|
@@ -9,7 +9,7 @@
 | `\r` | 回车    | return 光标移动到本行的开头    |
 | `\b` | 退格    | backspace 回退一个字符     |
 
-## 字符串中特殊用途字符 {#special-purpose-characters-in-strings}
+## 字符串中特殊用途字符
 
 | 转义字符 | 表达的字符 |
 |------|-------|

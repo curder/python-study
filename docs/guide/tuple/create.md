@@ -1,6 +1,6 @@
-# 创建元祖 {#top}
+# 创建元祖
 
-## 字典的创建 {#create-tuple}
+## 字典的创建
 
 - 使用小括号 `(`、`)`
     ```python
@@ -26,7 +26,7 @@
     print(t)  # (1, 2, 'hello', 'world')
     ```
   
-## 创建空元组 {#create-empty-tuple}
+## 创建空元组
 
 - 使用小括号方式
   ```python

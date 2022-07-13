@@ -1,1 +1,1 @@
-# Python 学习 {#python-study}
+# Python 学习

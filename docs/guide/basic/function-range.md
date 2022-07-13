@@ -1,4 +1,4 @@
-# range 函数 {#function-range}
+# range 函数
 
 range 函数用于生成整数序列，它返回一个迭代器对象。
 

@@ -1,11 +1,11 @@
-# 数据类型 {#top}
+# 数据类型
 
 - [字符串 str](#str)
 - [整数 int](#int)
 - [浮点数 float](#float)
 - [布尔类型 bool](#bool)
 
-## 字符串 {#str}
+## 字符串
 
 字符串又被成为不可变的字符序列，可以使用单引号 `'` 、双引号 `"` 或三个引号 `'''` `"""` 来定义。
 
@@ -27,7 +27,7 @@ print(str4, type(str4))  # 输出：hello
                          #      world <class 'str'>
 ```
 
-## 整型 {#int}
+## 整型
 
 英文integer，简写为int，可以表示正数，负数和零。
 
@@ -53,7 +53,7 @@ print(oct(number))  # 八进制    0o137
 print(hex(number))  # 十六进制  0x5f
 ```
 
-## 浮点数 {#float}
+## 浮点数
 
 浮点数由整数部分和小数部分组成。
 
@@ -80,7 +80,7 @@ print(Decimal('1.1') + Decimal('2.2'))  # 3.3
 print(Decimal('1.1') + Decimal('2.1'))  # 3.2
 ```
 
-## 布尔值 {#bool}
+## 布尔值
 
 布尔值用于表达真/假的值，`True` 表示真， `False` 表示假。
 
@@ -99,7 +99,7 @@ print(True + 1)  # 2
 print(False + 1)  # 1
 ```
 
-### bool 函数 {#bool-function}
+### bool 函数
 
 `bool()` 函数允许评估任何值，并返回 `True` 或 `False`。
 

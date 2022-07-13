@@ -1,6 +1,6 @@
 # 对象拷贝
 
-## 浅拷贝 `copy` {#copy}
+## 浅拷贝 `copy`
 
 拷贝时，对象所包含的子对象内容不拷贝，因此源对象与拷贝对象会引用同一个子对象。
 
@@ -30,7 +30,7 @@ print(id(computer), id(computer.cpu), id(computer.disk))     # 4333306352 433350
 print(id(computer2), id(computer2.cpu), id(computer2.disk))  # 4333955584 4333506032 4333733296
 ```
 
-## 深拷贝 `deepcopy` {#deepcopy}
+## 深拷贝 `deepcopy`
 
 拷贝时，递归拷贝对象中包含的子对象，源对象和拷贝对象所有的子对象也不相同。
 

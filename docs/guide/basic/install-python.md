@@ -71,10 +71,10 @@ ln -s /usr/local/python3.10.5/bin/pip3.10 /usr/bin/pip3
 ### 验证是否安装成功
 
 ```bash
-/usr/local/python3.10.5/bin/python3 -V # 下载python版本
+/usr/local/python3.10.5/bin/python3.10 -V # 下载python版本
 # Python 3.10.5
 
-/usr/local/python3.10.5/bin/pip3 -V # 查看pip下载器版本
+/usr/local/python3.10.5/bin/pip3.10 -V # 查看pip下载器版本
 # pip 22.0.4 from /usr/local/python3.10.5/lib/python3.10/site-packages/pip (python 3.10)
 ```
 

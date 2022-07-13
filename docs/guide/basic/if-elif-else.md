@@ -1,6 +1,6 @@
-# 流程判断 {#top}
+# 流程判断
 
-## if else 分支判断 {#if-else}
+## if else 分支判断
 
 ```python
 current_monty = 1000  # 总余额
@@ -13,7 +13,7 @@ else:
     print(f"您当前余额不足，当前余额为：{current_monty}")
 ```
 
-## if elif else 多分支判断 {#if-elif-else}
+## if elif else 多分支判断
 
 ```python
 score = int(input("Please enter your score: "))
@@ -31,7 +31,7 @@ else:
     print("incorrect input")
 ```
 
-## 条件表达式 {#if-condition-else}
+## 条件表达式
 
 条件表达式是 `if`、`else` 的简写。
 

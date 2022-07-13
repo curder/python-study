@@ -1,13 +1,13 @@
-# else 语句 {#else}
+# else 语句
 
-## 与 else 语句配合 {#works-with-else-statement}
+## 与 else 语句配合
 
 - `if-else` 表示条件不成立时执行else
 - `while-else` 没有碰到break时，执行else
 - `for-else` 没有碰到break时，执行else
 
 
-### if-else 和 for-else {#if-else-and-for-else}
+### if-else 和 for-else
 ```python {8-9}
 for _ in range(3):
     pwd = input("Pls enter your password：")
@@ -30,7 +30,7 @@ else:
 # too many times retry.
 ```
 
-### while-else {#while-else}
+### while-else
 
 ```python
 i = 0

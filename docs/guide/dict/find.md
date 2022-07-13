@@ -1,4 +1,4 @@
-# 字典查询操作 {#top}
+# 字典查询操作
 
 ## 获取字典元素
 
@@ -29,7 +29,7 @@
 1. `[]` 如果字典中不存在指定的key，则抛出 `KeyError` 异常
 2. `get` 方法取值，如果字典中不存在指定的key，放回 `None`，可以通过参数设置默认值，以便指定的 Key 不存在时返回
 
-## 判断键是否存在 {#key-exists}
+## 判断键是否存在
 
 使用 `in` 或 `not in` 判断键是否存在于字典中，最后返回布尔值。
 
@@ -40,7 +40,7 @@ print('hobby' in d)  # True
 print('name' not in d)  # False
 ```
 
-## 获取字典所有键 {#get-keys-from-dict}
+## 获取字典所有键
 
 通过字典的 `keys()` 方法可以获取到字典的所有键，再通过 `list` 函数将其转换为列表。
 
@@ -51,7 +51,7 @@ print(d.keys())  # dict_keys(['name', 'married'])
 print(list(d.keys()))  # ['name', 'married']
 ```
 
-## 获取字典所有值 {#get-values-from-dict}
+## 获取字典所有值
 
 通过字典的 `values()` 方法可以获取到字典的所有值，再通过 `list` 函数将其转换为列表。
 
@@ -62,7 +62,7 @@ print(d.values())  # dict_values(['curder', False])
 print(list(d.values()))  # ['curder', False]
 ```
 
-## 获取字典的键值 {#get-items-from-dict}
+## 获取字典的键值
 
 通过字典的 `items()` 方法可以获取到字典的所有键和值，再通过 `list` 函数将其转换为列表。
 
@@ -73,7 +73,7 @@ print(d.items())  # dict_items([('name', 'curder'), ('married', False)])
 print(list(d.items()))  # [('name', 'curder'), ('married', False)]
 ```
 
-## for-in遍历字典 {#for-many-items}
+## for-in遍历字典
 
 ```python
 d = {"name": "curder", "married": False}

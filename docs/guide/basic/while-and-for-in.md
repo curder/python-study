@@ -1,6 +1,6 @@
-# 循环结构 {#loop-structure}
+# 循环结构
 
-## while 循环 {#while}
+## while 循环
 
 while 循环的执行流程为：
 
@@ -16,7 +16,7 @@ while a < 10:
     a += 1
 ```
 
-### 计算 `1...100` 之间的所有偶数和 {#using-while-compute-all-even-numbers}
+### 计算 `1...100` 之间的所有偶数和
 
 ```python
 count = 0  # 存储计算结果
@@ -31,7 +31,7 @@ while n <= total:
 print(f"从1到{total}之间的所有偶数和为：{count}")  # 2550
 ```
 
-## for-in 循环 {#for-in}
+## for-in 循环
 
 `for-in`循环表示从字符串或序列等其他数据结构中依次取值。
 
@@ -51,7 +51,7 @@ for item in range(2):
     print('hello', end=" ")  # hello hello
 ```
 
-### 使用 for-in 求 1...100 之间偶数和 {#using-for-in-compute-all-even-numbers}
+### 使用 for-in 求 1...100 之间偶数和
 
 ```python
 count = 0  # 存储计算结果
@@ -64,7 +64,7 @@ for i in range(n, total + 1):
 print(f"从{n}到{total}之间的所有偶数和为：{count}")  # 从1到100之间的所有偶数和为：2550
 ```
 
-### 使用 for-in 找到水仙花数 {#use-for-in-to-find-the-number}
+### 使用 for-in 找到水仙花数
 
 什么是水仙花数？例如：`153 = 3 * 3 * 3 + 5 * 5 * 5 + 1 * 1 * 1`
 
@@ -77,7 +77,7 @@ for item in range(100, 1000):
         print(item, end=" ")  # 153 370 371 407 
 ```
 
-## break 关键字 {#break}
+## break 关键字
 
 `break` 语句用于结束循环结构，通常会配合 `if` 语句使用。
 
@@ -93,7 +93,7 @@ for item in range(3):
         print('error, Pls retry.')
 ```
 
-## continue 语句 {#continue}
+## continue 语句
 
 用于结束当前循环，进入下一次循环，通常与分支结构中的 `if` 一起使用。
 
@@ -107,7 +107,7 @@ for item in range(1, 51):
 ```
 
 
-## 九九乘法表 {#ninety-nine-multiplication-table}
+## 九九乘法表
 
 ```python
 # for-in

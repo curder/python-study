@@ -1,6 +1,6 @@
-# 列表的创建 {#top}
+# 列表的创建
 
-## 列表的创建 {#create-list}
+## 列表的创建
 
 列表的创建有两种方式：
 
@@ -15,7 +15,7 @@ print([1, True, "hello", 'world', False, 0.1])  # [1, True, 'hello', 'world', Fa
 print(list([1, True, "hello", 'world', False, 0.1]))  # [1, True, 'hello', 'world', False, 0.1]
 ```
 
-### 创建空列表 {#create-empty-list}
+### 创建空列表
 
 - 使用中括号
     ```python
@@ -33,7 +33,7 @@ print(list([1, True, "hello", 'world', False, 0.1]))  # [1, True, 'hello', 'worl
   print(l)  # []
   ```
 
-## 列表生成式 {#list-comprehension}
+## 列表生成式
 
 当需要生成一定有规则的数据时，可以使用列表生成式生成列表。它的语法格式为：`[ i for i in range(1, 11) ]`
 

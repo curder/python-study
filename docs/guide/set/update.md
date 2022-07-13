@@ -1,8 +1,8 @@
-# 编辑集合 {#update}
+# 编辑集合
 
-## 增加集合元素 {#add-item-to-set}
+## 增加集合元素
 
-### `add` 方法添加一个元素 {#add-method-add-item-to-set}
+### `add` 方法添加一个元素
 
 ```python
 s = {1, 2, 3, 4, 5}
@@ -11,7 +11,7 @@ s.add(6)
 print(s)  # {1, 2, 3, 4, 5, 6}
 ```
 
-### `update` 方法至少添加一个元素 {#update-method-add-items-to-set}
+### `update` 方法至少添加一个元素
 
 ```python
 s = {1, 2, 3, 4, 5}
@@ -26,7 +26,7 @@ s.update((10,))  # 添加元组
 print(s)  # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 ```
 
-## 删除集合元素 {#remove-item-from-set}
+## 删除集合元素
 
 | 方法 | 操作描述 |
 |--|-----|
@@ -35,7 +35,7 @@ print(s)  # {1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 | `pop()` | 一次只删除一个任意元素 |
 | `clear()` | 清空集合 |
 
-### `remove()` 方法 {#remote-method}
+### `remove()` 方法
 
 ```python
 s = {1, 2, 3, 4, 5}
@@ -47,7 +47,7 @@ s.remove(10)  # 删除不存在元素，抛出 KeyError 错误
 print(s)  # KeyError: 10
 ```
 
-### `discard()` 方法 {#discard-method}
+### `discard()` 方法
 
 ```python
 s = {1, 2, 3, 4, 5}
@@ -59,7 +59,7 @@ s.discard(10)  # 删除不存在的元素，并不会抛出 KeyError 错误
 print(s)  # {2, 3, 4, 5}
 ```
 
-### `pop()` 方法 {#pop-method}
+### `pop()` 方法
 
 ```python
 s = {1, 2, 3, 4, 5}
@@ -70,7 +70,7 @@ print(s)  # {2, 3, 4, 5}
 
 > 随机删除集合的元素。
 
-### `clear()` 方法 {#clear-method}
+### `clear()` 方法
 
 ```python
 s = {1, 2, 3, 4, 5}

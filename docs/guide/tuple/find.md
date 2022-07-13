@@ -1,6 +1,6 @@
 # 查询元组
 
-## 获取元组元素 {#find-one-item-from-tuple}
+## 获取元组元素
 通过索引方式获取元组中的元素。
 
 ```python
@@ -17,7 +17,7 @@ d = (1, 2, "hello", True)
 print(d[5])  # IndexError: tuple index out of range
 ```
 
-## 遍历元组 {#for-in-tuple-items}
+## 遍历元组
 
 元组是可以迭代对象，可以使用 `for-in` 进行遍历。
 

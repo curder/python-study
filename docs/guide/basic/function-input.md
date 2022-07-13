@@ -1,4 +1,4 @@
-# input 输入函数 {#input-function}
+# input 输入函数
 
 - input 函数接受用户输入的值。
 
