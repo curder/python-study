@@ -16,3 +16,12 @@
 | `\\` | 反斜杠   |
 | `\'` | 单引号   |
 | `\"` | 双引号   |
+
+## 原字符
+
+使转义字符不起作用，写在字符串前面，用 `r` 或 `R`。
+
+```python
+print(r"Hello\n world")  # Hello\n world
+print(R"Hello\n world")  # Hello\n world
+```
