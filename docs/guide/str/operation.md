@@ -291,3 +291,11 @@ string = 'Hello World, Hello Python, Hello Golang, Hello php'
 sub_str = 'p'
 print(f'{sub_str} 字符在字符串中出现的次数为：{get_count(string, sub_str)}')  # p 字符在字符串中出现的次数为：3
 ```
+
+## 获取字符串长度
+
+调用 Python 自带的函数 `len()` 可以获取字符串长度。
+
+```python
+print(len('Python'))  # 6
+```

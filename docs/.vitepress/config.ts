@@ -62,6 +62,18 @@ function sidebarGuide() {
             ]
         },
         {
+            text: "字符串",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                {text: "字符串操作", link: "/guide/str/operation"},
+                {text: "字符串比较", link: "/guide/str/compare"},
+                {text: "字符串切片", link: "/guide/str/slice"},
+                {text: "字符串格式化", link: "/guide/str/format"},
+                {text: "字符串编码转换", link: "/guide/str/conversion"},
+            ],
+        },
+        {
             text: "列表",
             collapsible: true,
             collapsed: true,
@@ -104,18 +116,6 @@ function sidebarGuide() {
                 {text: "编辑集合", link: "/guide/set/update"},
                 {text: "删除集合", link: "/guide/set/delete"},
                 {text: "集合操作", link: "/guide/set/operation"},
-            ],
-        },
-        {
-            text: "字符串",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                {text: "字符串操作", link: "/guide/str/operation"},
-                {text: "字符串比较", link: "/guide/str/compare"},
-                {text: "字符串切片", link: "/guide/str/slice"},
-                {text: "字符串格式化", link: "/guide/str/format"},
-                {text: "字符串编码转换", link: "/guide/str/conversion"},
             ],
         },
         {
