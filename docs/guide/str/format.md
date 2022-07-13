@@ -14,7 +14,8 @@ print("I am %s" % (name))  # I am curder
 
 ```python
 name = 'curder'
-print("I am {0}".format('curder'))  # I am curder
+age = 18
+print("I am {0}, I am {1} years old".format(name, age))  # I am curder, I am 18 years old
 ```
 
 <a name="using-f-string"></a>
