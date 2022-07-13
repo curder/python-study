@@ -38,7 +38,7 @@ function sidebarGuide() {
         {
             text: "基础",
             collapsible: true,
-            collapsed: true,
+            collapsed: false,
             items: [
                 {text: "安装", link: "/guide/basic/install-python"},
                 {text: "print函数", link: "/guide/basic/function-print"},
