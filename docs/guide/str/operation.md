@@ -250,6 +250,15 @@ print(' '.join(t))  # hello world !
 print('*'.join("Hello"))  # H*e*l*l*o
 ```
 
+也可以使用 `+` 对字符串进行拼接
+
+```python
+str1 = 'hello'
+str2 = 'world'
+
+print(str1 + str2)  # hello world
+```
+
 ## 判断字符串是否纯数字
 
 通过对字符串调用其 `isdigit()` 方法可以判断给定的字符串是否是纯数字。
