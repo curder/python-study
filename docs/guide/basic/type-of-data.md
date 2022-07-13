@@ -1,31 +1,9 @@
 # 数据类型
 
-- [字符串 str](#str)
-- [整数 int](#int)
-- [浮点数 float](#float)
-- [布尔类型 bool](#bool)
-
-## 字符串
-
-字符串又被成为不可变的字符序列，可以使用单引号 `'` 、双引号 `"` 或三个引号 `'''` `"""` 来定义。
-
-其中在单引号和双引号中定义的字符串必须在一行，三引号定义的字符串可以分布在多行。
-
-```python
-str1 = 'hello world'
-str2 = "hello world"
-str3 = '''hello 
-world'''
-str4 = """hello 
-world"""
-
-print(str1, type(str1))  # 输出：hello world <class 'str'>
-print(str2, type(str2))  # 输出：hello world <class 'str'>
-print(str3, type(str3))  # 输出：hello 
-                         #      world <class 'str'>
-print(str4, type(str4))  # 输出：hello 
-                         #      world <class 'str'>
-```
+- [整型 int](#整型)
+- [浮点型 float](#浮点型)
+- [布尔类型 bool](#布尔类型)
+- [字符串 str](#字符串)
 
 ## 整型
 
@@ -53,7 +31,7 @@ print(oct(number))  # 八进制    0o137
 print(hex(number))  # 十六进制  0x5f
 ```
 
-## 浮点数
+## 浮点型
 
 浮点数由整数部分和小数部分组成。
 
@@ -80,7 +58,7 @@ print(Decimal('1.1') + Decimal('2.2'))  # 3.3
 print(Decimal('1.1') + Decimal('2.1'))  # 3.2
 ```
 
-## 布尔值
+## 布尔类型
 
 布尔值用于表达真/假的值，`True` 表示真， `False` 表示假。
 
@@ -120,4 +98,26 @@ print(bool({}))  # 空字典
 print(bool(dict()))  # 空字典
 print(bool(set()))  # 空集合
 
+```
+
+## 字符串
+
+字符串又被成为不可变的字符序列，可以使用单引号 `'` 、双引号 `"` 或三个引号 `'''` `"""` 来定义。
+
+其中在单引号和双引号中定义的字符串必须在一行，三引号定义的字符串可以分布在多行。
+
+```python
+str1 = 'hello world'
+str2 = "hello world"
+str3 = '''hello 
+world'''
+str4 = """hello 
+world"""
+
+print(str1, type(str1))  # 输出：hello world <class 'str'>
+print(str2, type(str2))  # 输出：hello world <class 'str'>
+print(str3, type(str3))  # 输出：hello 
+#      world <class 'str'>
+print(str4, type(str4))  # 输出：hello 
+#      world <class 'str'>
 ```
