@@ -134,6 +134,22 @@ s = 'hello,world,hi,python'
 print(s.rsplit(sep=",", maxsplit=2))  # ['hello,world', 'hi', 'python']
 ```
 
+## 去除字符串首位字符
+
+使用 `strip()` 方法并且不传参数时可以去除字符串的首位空格。
+
+```python
+s = '  python '
+print(s.strip())  # python
+```
+
+给 `strip()` 传递参数可以指定要去除的字符。
+
+```python
+s = '6666python:6666'
+print(s.strip('6'))  # python:
+```
+
 ## 判断字符串操作
 
 | 方法名称                                                                                       | 作用                                    |
