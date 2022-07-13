@@ -270,7 +270,15 @@ print('1a'.isdigit())  # False
 
 ## 统计字符出现次数
 
-忽略大小写的统计字符串出现次数。
+Python 中默认的 `count()` 方法统计字符串出现的次数时是不忽略大小写的方式进行的统计，找不到时返回 `0` 。比如：
+
+```python
+string = 'Hello World, Hello Python, Hello Golang, Hello php'
+sub_str = 'p'
+string.count(sub_str)  # 2
+```
+
+通过自定义编写函数，达到忽略大小写的统计字符串出现次数统计的目的。
 
 ```python
 def get_count(string, sub_str):
