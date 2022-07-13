@@ -299,3 +299,11 @@ print(f'{sub_str} 字符在字符串中出现的次数为：{get_count(string, s
 ```python
 print(len('Python'))  # 6
 ```
+
+## 字符串乘法操作
+
+```python
+s = 'hello'
+
+print(s * 2)  # hellohello
+```
