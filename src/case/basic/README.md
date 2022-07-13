@@ -23,3 +23,4 @@
 - [统计每个兴趣的学生人数](./count-the-number-of-students-per-interest.py)
 - [获取当前日期时间](./get-current-datetime.py)
 - [计算两个日期相隔天数](./calculate-the-time-between-two-days.py)
+- [计算任意日期7天前的日期](./calculate-the-date-7-days-before-any-date.py)
