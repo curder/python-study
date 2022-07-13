@@ -307,3 +307,10 @@ s = 'hello'
 
 print(s * 2)  # hellohello
 ```
+
+## 字符串反转
+
+```python
+s = 'python'
+print(s[::-1])  # nohtyp
+```
