@@ -9,12 +9,20 @@
 
 ```python
 # 1. 使用花括号创建字典
-d = {"name": "curder", "hobby": "coding"}
+d = {
+  "name": "curder",
+  "hobby": "coding"
+}
 print(d)  # {'name': 'curder', 'hobby': 'coding'}
 
-# 2. 使用dirt函数创建字典
+# 使用dirt函数创建字典
+## 2.1 直接传参 
 d = dict(name="curder", hobby="coding")
 print(d)  # {'name': 'curder', 'hobby': 'coding'}
+
+# 2.2 使用元祖参数
+d = dict((('name', 'curder'), ('hobby', 'coding')))
+print(d)
 ```
 
 ## 创建空字典
