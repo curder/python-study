@@ -19,7 +19,7 @@
     print(type(s))  # <class 'set'>
     print(s)  # {1, 2, 'hello'}
     ```
-    > `set()` 函数可以接收 `列表 list`， `元组 tuple`，`字典 dict` 等。
+    > `set()` 函数可以接收 `字符串 str`，`列表 list`， `元组 tuple`，`字典 dict` 等。
 
 ## 创建空集合
 
