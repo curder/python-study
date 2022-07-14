@@ -79,3 +79,31 @@ d1 = d.fromkeys(("name", "age"), ('curder', 18,))
 print(d1)  # {'name': ('curder', 18), 'age': ('curder', 18)}
 ```
 > 使用 `fromkeys()` 方法会产生一个新的字典，而不是在原字典上进行变更
+
+## 删除字典最后一个元素
+
+`popitem()` 方法用于从字典中删除最后一项，并以元组形式返回该项所对应的键和值。
+
+```python
+d = {"name": "curder", "hobby": "coding"}
+
+result = d.popitem()
+
+print(result) # ('hobby', 'coding')
+print(d)  # {'name': 'curder'}
+```
+> 如果字典为空，调用 `popitem()` 方法，会抛出 `KeyError` 错误。
+ 
+## 设置字典默认值
+
+`setdefault()` 方法用于设置字典的默认值。
+
+- 如果字典中已已经存在对应的键，则忽略
+- 如果不存在则添加该键和值
+
+```python
+d = {"name": "curder", "hobby": "coding"}
+d.setdefault('married', False) # 设置不存在的key
+d.setdefault('name', 'luo')  # 设置已存在的key，忽略添加
+print(d)  # {'name': 'curder', 'hobby': 'coding', 'married': False}
+```
