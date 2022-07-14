@@ -25,6 +25,19 @@ d = dict((('name', 'curder'), ('hobby', 'coding')))
 print(d)
 ```
 
+⚠️**注意**：字典的键可以使用 `字符串 str`, `数字 int`，`浮点数 float` 或 `元祖 tuple`。
+
+```python
+d = {
+  "name": "curder",
+  1: "curder",
+  0.1: "curder",
+  (1,2,3): "curder",
+  [1,3,4]: 'curder'
+}
+print(d)  # {'name': 'curder', 1: 'curder', 0.1: 'curder', (1, 2, 3): 'curder'}
+```
+
 ## 创建空字典
 
 - 使用花括号
