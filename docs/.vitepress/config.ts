@@ -86,6 +86,17 @@ function sidebarGuide() {
             ]
         },
         {
+            text: "元组",
+            collapsible: true,
+            collapsed: true,
+            items: [
+                {text: "创建元组", link: "/guide/tuple/create"},
+                {text: "查询元组", link: "/guide/tuple/find"},
+                {text: "删除元组", link: "/guide/tuple/delete"},
+                {text: "元祖拼接", link: "/guide/tuple/splice"},
+            ]
+        },
+        {
             text: "字典",
             collapsible: true,
             collapsed: true,
@@ -94,16 +105,6 @@ function sidebarGuide() {
                 {text: "查询字典", link: "/guide/dict/find"},
                 {text: "编辑字典", link: "/guide/dict/update"},
                 {text: "删除字典", link: "/guide/dict/delete"},
-            ]
-        },
-        {
-            text: "元组",
-            collapsible: true,
-            collapsed: true,
-            items: [
-                {text: "创建元组", link: "/guide/tuple/create"},
-                {text: "查询元组", link: "/guide/tuple/find"},
-                {text: "删除元组", link: "/guide/tuple/delete"},
             ]
         },
         {
