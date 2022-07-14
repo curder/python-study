@@ -2,6 +2,13 @@
 
 ## 字典的创建
 
+- 使用 `,` 分割
+    ```python
+    t = 1, 2, 'hello', 'world'
+    print(type(t))  # <class 'tuple'>
+    print(t)  # (1, 2, 'hello', 'world')
+    ```
+
 - 使用小括号 `(`、`)`
     ```python
     t = (1, 2, "hello", "world")
