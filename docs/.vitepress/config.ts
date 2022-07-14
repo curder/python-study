@@ -52,6 +52,7 @@ function sidebarGuide() {
                 {text: "input函数", link: "/guide/basic/function-input"},
                 {text: "运算符", link: "/guide/basic/operator"},
                 {text: "流程判断", link: "/guide/basic/if-elif-else"},
+                {text: "in和not in", link: "/guide/basic/in-and-not-in"},
                 {text: "pass语句", link: "/guide/basic/pass"},
                 {text: "range函数", link: "/guide/basic/function-range"},
                 {text: "循环结构", link: "/guide/basic/while-and-for-in"},
