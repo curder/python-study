@@ -40,3 +40,13 @@ d['married'] = True
 print(d)  # {'name': 'curder', 'married': True}
 ```
 
+## 拷贝字典
+
+```python
+d = {"name": "curder", "married": False}
+
+d2 = d.copy()
+print(d2)  # {'name': 'curder', 'married': False}
+```
+
+> 对原字典进行增删改操作，不会影响拷贝后的字典 `d2` 。
