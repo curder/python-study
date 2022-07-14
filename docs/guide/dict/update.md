@@ -11,7 +11,7 @@ print(d)  # {'name': 'curder', 'hobby': 'coding', 'married': False}
 
 ## 删除字典元素
 
-使用 `del` 关键字删除字典元素。
+- 使用 `del` 关键字删除字典元素
 
 ```python {3}
 d = {"name": "curder", "hobby": "coding"}
@@ -19,6 +19,21 @@ d = {"name": "curder", "hobby": "coding"}
 del d["hobby"]  # 删除字典的 hobby key
 print(d)  # {'name': 'curder'}
 ```
+> 如果删除了一个不存在于字典中的key，则会抛出 `KeyError` 错误。
+
+- 使用 `pop()` 方法
+
+```python
+d = {"name": "curder", "hobby": "coding"}
+result = d.pop('hobby')
+print(d)  # {'name': 'curder'}
+print(result)  # coding
+```
+
+> 值得注意的是：
+> 1. 使用字典的 `pop` 方法移除指定键，会返回该键对应字典中的值。
+>
+> 2. 如果删除了一个不存在于字典中的key，则会抛出 `KeyError` 错误。
 
 ### 清空列表元素
 
