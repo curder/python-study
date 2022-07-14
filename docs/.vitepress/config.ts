@@ -94,6 +94,7 @@ function sidebarGuide() {
                 {text: "查询元组", link: "/guide/tuple/find"},
                 {text: "删除元组", link: "/guide/tuple/delete"},
                 {text: "元祖拼接", link: "/guide/tuple/splice"},
+                {text: "元祖操作", link: "/guide/tuple/operation"},
             ]
         },
         {
