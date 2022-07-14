@@ -55,6 +55,21 @@ d['married'] = True
 print(d)  # {'name': 'curder', 'married': True}
 ```
 
+## `update` 方法修改字典
+
+`update` 方法接受两个参数，分别是两个字典。
+
+- 如果字典2的键在字典1中存在，则对字典1进行修改。
+- 如果字典2的键在字典1中不存在，则对字典1进行添加。
+
+```python
+d1 = {"name": "curder", "married": False}
+d2 = {"name": "luo", "hobby": 'coding'}
+
+d1.update(d2)
+print(d1)  # {'name': 'luo', 'married': False, 'hobby': 'coding'}
+```
+
 ## 拷贝字典
 
 ```python
