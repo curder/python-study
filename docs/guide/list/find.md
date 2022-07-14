@@ -6,7 +6,11 @@
 
 ```python
 l = ['hello', 'world', 100, 'hello']
-print(l.index('hello'))
+print(l.index('hello'))  # 0
+
+# 指定范围查找
+l = ['hello', 'world', 100, 'hello']
+print(l.index('hello', 1, 4))  # 3
 ```
 
 ### 查找的元素不存在
