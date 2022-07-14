@@ -300,6 +300,22 @@ print(f'{sub_str} 字符在字符串中出现的次数为：{get_count(string, s
 print(len('Python'))  # 6
 ```
 
+## 获取最大字符
+
+使用 `max()` 函数获取字符串中的最大字符，比较的是字符的 ASCII 码值。
+
+```python
+print(max('hello你好啊'))  # 好
+```
+
+## 获取最小字符
+
+使用 `min()` 函数获取字符串中的最小字符，比较的是字符的 ASCII 码值。
+
+```python
+print(min('hello你好啊'))  # e
+```
+
 ## 字符串乘法操作
 
 ```python
