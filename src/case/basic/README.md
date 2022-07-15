@@ -33,3 +33,4 @@
 - [校验密码是否满足要求](./verify-that-the-password-meets-the-requirements.py)
 - [提取商品价格](./extract-product-price.py)
 - [给文章中的手机号打码](./dial-the-phone-number-in-the-article.py)
+- [日期格式标准化](./standardize-date-formats.py)
