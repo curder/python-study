@@ -20,12 +20,12 @@ print(d)  # {'name': 'curder', 'hobby': 'coding'}
 d = dict(name="curder", hobby="coding")
 print(d)  # {'name': 'curder', 'hobby': 'coding'}
 
-# 2.2 使用元祖参数
+# 2.2 使用元组参数
 d = dict((('name', 'curder'), ('hobby', 'coding')))
 print(d)
 ```
 
-⚠️**注意**：字典的键可以使用 `字符串 str`, `数字 int`，`浮点数 float` 或 `元祖 tuple`。
+⚠️**注意**：字典的键可以使用 `字符串 str`, `数字 int`，`浮点数 float` 或 `元组 tuple`。
 
 ```python
 d = {

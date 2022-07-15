@@ -11,7 +11,7 @@
         return 'hello world'
     ```
 
-3. 函数返回值有多个的情况，返回的结果为元祖
+3. 函数返回值有多个的情况，返回的结果为元组
     ```python
     def calc(args):
         odd = []
