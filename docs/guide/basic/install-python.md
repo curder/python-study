@@ -18,6 +18,8 @@ Python是跨平台的，它可以运行在Windows、Mac和各种Linux/Unix系统
 
 - 方法二：如果安装了[Homebrew](https://brew.sh/)，直接通过命令`brew install python3`安装即可。
 
+> 如果下载模块太慢或者无法下载模块可以参考下方的 "配置 pip 源" 修改 `pip3` 源。 
+
 ## 在 CentOS 上安装Python
 
 下面以安装当前官网最新的 Python 3.10.5 为例。
@@ -99,6 +101,9 @@ ssl_verify: false
 > 上面配置了清华，豆瓣，阿里的源，并且关闭了ssl验证。如果有需要还可以设置代理,把注释掉的 `proxy` 行放开即可。
 
 ```bash
+# 检查配置是否生效
+pip3 config get global.index-url
+
 # 更新pip
 pip3 install --upgrade pip
 ```
