@@ -28,3 +28,4 @@
 - [将Unix时间戳转换为日期](./convert-unix-timestamp-to-date.py)
 - [验证字符串是否为日期格式](./validate-if-string-is-in-date-format.py)
 - [获取字符串中包含的所有手机号](./get-all-mobile-numbers-contained-in-a-string.py)
+- [获取文件中所有手机号](./get-all-mobile-phone-numbers-in-the-file.py)
