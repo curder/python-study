@@ -53,6 +53,7 @@ function sidebarGuide() {
                 {text: "运算符", link: "/guide/basic/operator"},
                 {text: "流程判断", link: "/guide/basic/if-elif-else"},
                 {text: "in和not in", link: "/guide/basic/in-and-not-in"},
+                {text: "is和is not", link: "/guide/basic/is-and-is-not"},
                 {text: "pass语句", link: "/guide/basic/pass"},
                 {text: "range函数", link: "/guide/basic/function-range"},
                 {text: "循环结构", link: "/guide/basic/while-and-for-in"},
@@ -94,8 +95,8 @@ function sidebarGuide() {
                 {text: "创建元组", link: "/guide/tuple/create"},
                 {text: "查询元组", link: "/guide/tuple/find"},
                 {text: "删除元组", link: "/guide/tuple/delete"},
-                {text: "元祖拼接", link: "/guide/tuple/splice"},
-                {text: "元祖操作", link: "/guide/tuple/operation"},
+                {text: "元组拼接", link: "/guide/tuple/splice"},
+                {text: "元组操作", link: "/guide/tuple/operation"},
             ]
         },
         {
