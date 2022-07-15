@@ -31,3 +31,4 @@
 - [获取文件中所有手机号](./get-all-mobile-phone-numbers-in-the-file.py)
 - [获取所有邮箱地址](./get-all-email-addresses.py)
 - [校验密码是否满足要求](./verify-that-the-password-meets-the-requirements.py)
+- [提取商品价格](./extract-product-price.py)
