@@ -37,3 +37,4 @@
 - [日期格式标准化](./standardize-date-formats.py)
 - [中文内容分词](./chinese-content-segmentation.py)
 - [统计文本中的人名](./the-name-of-the-person-in-the-statistical-text.py)
+- [将一个数组逆序输出](./output-a-array-reverse-order.py)
