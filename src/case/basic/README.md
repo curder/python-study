@@ -36,3 +36,4 @@
 - [给文章中的手机号打码](./dial-the-phone-number-in-the-article.py)
 - [日期格式标准化](./standardize-date-formats.py)
 - [中文内容分词](./chinese-content-segmentation.py)
+- [统计文本中的人名](./the-name-of-the-person-in-the-statistical-text.py)
