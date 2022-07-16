@@ -15,6 +15,7 @@
 - [统计学生成绩最高分、最低分和平均分](statistics-of-students-highest-lowest-and-average-scores.py)
 - [统计课程的高分低分和平均分](statistics-of-many-course-highest-lowest-and-average-scores.py)
 - [统计单词出现次数](./count-word-occurrences.py)
+- [英文分词计算词频](./english-word-division-calculation-words-frequently.py)
 - [统计目录下所有文件大小](./count-the-size-of-all-files-in-the-directory.py)
 - [按文件后缀整理文件夹](./organize-folders-by-file-suffix.py)
 - [递归搜索目录中最大的文件](./recursively-search-for-largest-file-in-a-directory.py)
