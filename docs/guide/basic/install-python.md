@@ -20,6 +20,41 @@ Python是跨平台的，它可以运行在Windows、Mac和各种Linux/Unix系统
 
 > 如果下载模块太慢或者无法下载模块可以参考下方的 "配置 pip 源" 修改 `pip3` 源。 
 
+### 安装和配置多版本 Python
+
+使用 [`pyenv`](https://github.com/pyenv/pyenv) 对 Python 多版本进行管理。
+
+```bash
+brew install pyenv # 安装 pyenv
+
+pyenv install -l # 查看可安装的 Python 版本
+pyenv versions # 查看本机安装 Python 版本
+
+pyenv install 2.7.18 # 下载 Python 2.7.18
+```
+
+```bash
+# 启动 zsh 终端支持
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+```
+
+#### Python 切换
+```bash
+pyenv global 2.7.18  # 设置全局的 Python 版本，通过将版本号写入 ~/.pyenv/version 文件的方式。
+pyenv local 2.7.18 # 设置 Python 本地版本，通过将版本号写入当前目录下的 .python-version 文件的方式。通过这种方式设置的 Python 版本优先级较 global 高。
+# 需同在寻找 python 的时候优先级 shell > local > global
+```
+
+```bash
+pyenv shell 2.7.18 # 设置面向 shell 的 Python 版本，通过设置当前 shell 的 PYENV_VERSION 环境变量的方式。这个版本的优先级比 local 和 global 都要高。`--unset` 参数可以用于取消当前 shell 设定的版本。
+pyenv shell --unset
+pyenv rehash  # 创建垫片路径（为所有已安装的可执行文件创建 shims，如：~/.pyenv/versions/*/bin/*，因此，每当你增删了 Python 版本或带有可执行文件的包（如 pip）以后，都应该执行一次本命令）
+```
+
+
+
 ## 在 CentOS 上安装Python
 
 下面以安装当前官网最新的 Python 3.10.5 为例。
