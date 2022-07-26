@@ -159,9 +159,15 @@ pip3 install aiohttp
 
 
 ```bash
-pip3 install requests
-pip3 install aiofiles
-pip3 install asyncio
-pip3 install aiohttp
-pip3 install pycryptodome
+pip3 install requests aiofiles asyncio aiohttp pycryptodome
+```
+
+## [站长之家-帅哥图片 异步下载](./sc.chinaz.com-shuaigetupian.py)
+
+1. 分析出图片列表页中图片详情URL
+2. 将图片详情URL添加到下载异步处理任务
+3. 分析图片地址并下载到本地
+
+```bash
+pip3 install aiofiles aiohttp requests asyncio
 ```
