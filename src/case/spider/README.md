@@ -20,6 +20,11 @@
 
 - `pip3 install aiofiles`
 
+## [KFC城市店铺](./kfc.com.cn.py)
+
+一直获取下一页数据，直到达到边界值再退出获取。
+
+
 ## [爬取 lagou.com 站的岗位信息](./www.lagou.com.py)
 
 **注意：** Mac端电脑下载 [google chrome driver](https://chromedriver.storage.googleapis.com/index.html)，解压后将可执行包放在 `/usr/local/bin` 目录下，并需要在电脑的 "系统偏好设置" -> "安全性与隐私" -> "通用" 中允许软件运行。
