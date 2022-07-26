@@ -21,22 +21,22 @@ urls = [
 ]
 
 
-async def download(url):
+async def download(session, url):
     file_name = url.rsplit('/')[-1]  # 从URL中获取文件名作为本地保存的文件名
     # 使用 aiohttp 模块发送请求
-    async with aiohttp.client.ClientSession() as session:
-        async with session.get(url) as response:  # 发送请求获取响应
-            # 异步将响应写入到文件
-            async with aiofiles.open(file_name, mode='wb') as f:
-                await f.write(await response.content.read())  # 读取内容是异步的，需要 await 挂起
+    async with session.get(url) as response:  # 发送请求获取响应
+        # 异步将响应写入到文件
+        async with aiofiles.open(file_name, mode='wb') as f:
+            await f.write(await response.content.read())  # 读取内容是异步的，需要 await 挂起
 
 
 async def main():
     tasks = []
-    for url in urls:
-        tasks.append(asyncio.create_task(download(url)))
+    async with aiohttp.client.ClientSession() as session:
+        for url in urls:
+            tasks.append(asyncio.create_task(download(session, url)))
 
-    await asyncio.wait(tasks)
+        await asyncio.wait(tasks)
 
 
 if __name__ == '__main__':
