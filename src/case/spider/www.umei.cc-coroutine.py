@@ -12,7 +12,7 @@ import asyncio
 import aiohttp
 import aiofiles
 
-# 带获取图片的地址
+# 待获取图片的地址
 urls = [
     'http://kr.shanghai-jiuxin.com/file/2022/0708/6a8001b60ce8fdb63c958ca30a2e3d9a.jpg',
     'http://kr.shanghai-jiuxin.com/file/2022/0705/58a94d3459aefc1ee4df65ed4750be46.jpg',
