@@ -5,8 +5,7 @@
 2. BeautifulSoup 解析整个页面的源代码
 3. 下载图片到当前目录
 
-pip3 install requests
-pip3 install beautifulsoup4
+pip3 install requests beautifulsoup4
 """
 import os.path
 import ntpath
@@ -15,7 +14,8 @@ from bs4 import BeautifulSoup
 
 base_url = 'https://www.umei.cc'
 headers = {
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.115 Safari/537.36'
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36",
 }  # 设置请求头
 
 response = requests.get(base_url + '/meinvtupian/meinvxiezhen/', headers=headers)
@@ -37,8 +37,10 @@ for a in a_list:
     # 如果不存在目录则创建目录
     sub_page_id = str.split(str.split(sub_page_url, '/')[-1], '.')[0]  # 从地址栏上获取ID
 
-    if not os.path.exists('umei.cc/%s' % sub_page_id):
-        os.mkdir('umei.cc/%s' % sub_page_id)
+    # 判断目录是否存在，如果不存在则新建
+    path = 'www.umei.cc/{}'.format(sub_page_id)
+    if not os.path.exists(path):
+        os.makedirs(path)
 
     # 发送请求到子页面
     sub_response = requests.get(sub_page_url, headers=headers)
@@ -51,9 +53,11 @@ for a in a_list:
     # 从图片地址获取文件名
     filename = ntpath.basename(img_src_list)
 
+    file_path = os.path.join(path, filename)
+    print(file_path)
     # 将图片下载到本地
-    with open('umei.cc/%s/%s' % (sub_page_id, filename), mode="wb") as f:
-        f.write(requests.get(img_src_list).content)  # 这里 content 获取的二进制数据
+    with open(file_path, mode="wb") as f:
+        f.write(requests.get(img_src_list, headers=headers).content)  # 这里 content 获取的二进制数据
         print(f'download image %s success.' % filename)
 
     # 找当前图片的相关图片
@@ -75,6 +79,7 @@ for a in a_list:
 
         # 从图片地址获取文件名
         other_filename = ntpath.basename(other_img_src_list)
-        with open('umei.cc/%s/%s' % (sub_page_id, other_filename), mode="wb") as f:
-            f.write(requests.get(other_img_src_list).content)  # 这里 content 获取的二进制数据
-            print(f'download image %s success.' % other_filename)
+        file_path = os.path.join(path, other_filename)
+        with open(file_path, mode="wb") as f:
+            f.write(requests.get(other_img_src_list, headers=headers).content)  # 这里 content 获取的二进制数据
+            print(f'download related image %s success.' % other_filename)

@@ -4,9 +4,9 @@
 
 爬取 [优美图库](https://umei.cc) 站 `美女图片` -> `美女写真` 栏目下的图片并保存到本地。
 
-使用库：
-- `requests`
-- `BeautifulSoup`
+```bash
+pip3 install requests beautifulsoup4
+```
 
 ## [优美图库 - 使用协程获取图片](./www.umei.cc-coroutine.py)
 
@@ -14,11 +14,9 @@
 
 2. 使用 aiohttp 模块发送请求，异步读取响应，并使用 aiofiles 异步写入到文件
 
-- `pip3 install asyncio`
-
-- `pip3 install aiohttp`
-
-- `pip3 install aiofiles`
+```bash
+pip3 install asyncio aiohttp aiofiles
+```
 
 ## [KFC城市店铺](./kfc.com.cn.py)
 
