@@ -29,7 +29,7 @@ export default defineConfig({
 
 function nav() {
     return [
-        {text: 'Guide', link: '/guide/basic/install-python', activeMatch: '/guide/'},
+        {text: 'Guide', link: '/guide/basic/install', activeMatch: '/guide/'},
         // {text: 'Cases', link: '/case/io', activeMatch: '/case/'},
         {text: 'Packages', link: '/packages/httpx', activeMatch: '/packages/'},
     ];
@@ -42,7 +42,7 @@ function sidebarGuide() {
             collapsible: true,
             collapsed: false,
             items: [
-                {text: "安装", link: "/guide/basic/install-python"},
+                {text: "安装", link: "/guide/basic/install"},
                 {text: "print函数", link: "/guide/basic/function-print"},
                 {text: "转义字符", link: "/guide/basic/escape-character"},
                 {text: "系统保留字", link: "/guide/basic/reserved-word"},
