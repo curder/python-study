@@ -22,6 +22,7 @@ export default defineConfig({
         sidebar: {
             "/guide": sidebarGuide(),
             "/case": sidebarCase(),
+            '/packages': sidebarPackage(),
         }
     }
 });
@@ -29,7 +30,8 @@ export default defineConfig({
 function nav() {
     return [
         {text: 'Guide', link: '/guide/basic/install-python', activeMatch: '/guide/'},
-        {text: 'Cases', link: '/case/io', activeMatch: '/case/'},
+        // {text: 'Cases', link: '/case/io', activeMatch: '/case/'},
+        {text: 'Packages', link: '/packages/httpx', activeMatch: '/packages/'},
     ];
 }
 
@@ -185,3 +187,15 @@ function sidebarCase() {
     ];
 }
 
+function sidebarPackage() {
+    return [
+        {
+            text: "扩展包",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: "httpx", link: '/packages/httpx'},
+            ]
+        }
+    ];
+}
