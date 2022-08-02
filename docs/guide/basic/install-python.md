@@ -155,4 +155,103 @@ source ~/.venv/bin/activate # 激活虚拟环境
 echo 'source ~/.venv/bin/activate' >> ~/.bash_profile # 登录用户同时激活Python虚拟环境
 ```
 
+## 在 CentOS 上安装 Jupyter
 
+Jupyter 能实现随时随地在浏览器上进行 Python 处理数据等程序。
+
+Jupyter notebook是一个 Web 应用，能让用户将说明文本、数学方程、代码和可视化内容全部组合到一个易于共享的文档中。
+
+与常规的py文件不同的是，Jupyter notebook主要运行的是ipython，ipython是一个python的交互式shell，非常适合进行科学计算和交互可视化。
+
+### 安装
+
+```bash
+pip install jupyter notebook
+```
+
+### 生成访问密码
+
+```bash
+ipython # 1.输入命令进入 ipython 终端
+
+# 2. 输入下列内容
+from notebook.auth import passwd
+passwd()
+
+# 3. 输入访问密码，并记录下加密字符串，需要在后面配置
+```
+
+
+### 生成配置文件
+
+```bash
+jupyter-notebook --generate-config
+```
+
+一般会生成配置文件在 `/home/USERNAME/.jupyter/jupyter_notebook_config.py`，其中 `USERNAME` 为当前登录用户名。
+
+### 文件末尾添加配置内容
+```
+c.NotebookApp.ip = '*' #所有绑定服务器的IP都能访问，若想只在特定ip访问，输入ip地址即可
+c.NotebookApp.port = 18888 #将端口设置为自己喜欢的吧，默认是8888
+c.NotebookApp.open_browser = False # 我们并不想在服务器上直接打开Jupyter Notebook，所以设置成False
+c.NotebookApp.notebook_dir = "/var/www/codes/python-projects/jupyter-notebook/"
+c.NotebookApp.allow_root = False
+c.NotebookApp.password = '' # 这里输入上面生成的密码加密后后的字符串
+```
+
+
+### 启动
+
+```python
+jupyter-notebook --config=/home/USERNAME/.jupyter/jupyter_notebook_config.py
+```
+> 将 `USERNAME` 修改为当前运行的用户。
+
+### 开机自启
+
+使用下面的脚本可以实现开机自启
+
+```bash
+echo '[Unit]
+Description=Jupyter Notebook
+After=network.target
+[Service]
+Type=simple
+ExecStart=/var/www/codes/python-projects/venv/bin/python /var/www/codes/python-projects/venv/bin/jupyter-notebook --config=/home/USERNAME/.jupyter/jupyter_notebook_config.py
+User=USERNAME
+Group=webadmin
+WorkingDirectory=/var/www/codes/python-projects/jupyter-notebook
+# 文件路径名
+Restart=always
+RestartSec=10
+[Install]
+WantedBy=multi-user.target' > /etc/systemd/system/jupyter.service
+```
+
+> 将 `USERNAME` 修改为当前运行的用户。
+
+```bash
+systemctl enable jupyter #设置开机自启
+systemctl start jupyter #启动
+```
+
+### Supervisor 守护进程
+
+```bash
+[program:jupyter-notebook]
+directory=/var/www/codes/python-projects/jupyter-notebook
+command=/bin/bash -E -c /shell-path/run-jupyter-notebook.sh
+autostart=true
+autorestart=true
+stopsignal=INT
+stopasgroup=true
+killasgroup=true
+user=USERNAME
+```
+> 将 `USERNAME` 修改为当前运行的用户。
+
+#### 重启 Supervisor
+```bash
+sudo systemctl restart supervisor.service
+```
