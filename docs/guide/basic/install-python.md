@@ -200,6 +200,49 @@ c.NotebookApp.allow_root = False
 c.NotebookApp.password = '' # 这里输入上面生成的密码加密后后的字符串
 ```
 
+### 添加Nginx配置
+
+```nginx
+upstream jupyter {
+    server 127.0.0.1:18888; # 主机端口，对应配置文件 `/home/USERNAME/.jupyter/jupyter_notebook_config.py` 中的端口号
+}
+
+server {
+    listen 80 ;  # 监听 80 端口，这里注意不要和 jupyter 端口一致
+    gzip on;
+    server_name jupyter.DOMAIN.com; # 修改为自己的域名
+
+    access_log /var/log/nginx/jupyter.DOMAIN.com_access.log main;
+    error_log  /var/log/nginx/jupyter.DOMAIN.com_error.log;
+
+    location / {
+        proxy_redirect off;
+        proxy_pass http://jupyter; # 设置代理服务器，请求发送
+
+        proxy_set_header  Host                $http_host;
+        proxy_set_header  X-Real-IP           $remote_addr;
+        proxy_set_header  X-Forwarded-Ssl     on;
+        proxy_set_header  X-Forwarded-For     $proxy_add_x_forwarded_for;
+
+        # 使得Nginx支持websocket
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
+        proxy_set_header  X-Forwarded-Proto   $scheme;
+        proxy_set_header  X-Frame-Options     SAMEORIGIN;
+
+        client_max_body_size        100m;
+        client_body_buffer_size     128k;
+
+        proxy_buffer_size           4k;
+        proxy_buffers               4 32k;
+        proxy_busy_buffers_size     64k;
+        proxy_temp_file_write_size  64k;
+    }
+}
+```
+
+
 
 ### 启动
 
