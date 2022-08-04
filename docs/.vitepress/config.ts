@@ -167,23 +167,10 @@ function sidebarGuide() {
                 {text: "文件编码", link: "/guide/os/encoding"},
                 {text: "常用方法", link: "/guide/os/method"},
                 {text: "with语句", link: "/guide/os/with"},
+                {text: "文件操作", link: "/guide/os/file"},
                 {text: "目录操作", link: "/guide/os/directory"},
             ],
         },
-    ];
-}
-
-
-function sidebarCase() {
-    return [
-        {
-            text: "磁盘IO",
-            collapsible: true,
-            collapsed: false,
-            items: [
-                {text: "IO", link: "/case/io"},
-            ],
-        }
     ];
 }
 
