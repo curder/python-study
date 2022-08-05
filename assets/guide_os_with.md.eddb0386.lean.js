@@ -1,1 +1,0 @@
-import{_ as s,c as n,o as a,a as l}from"./app.b823025b.js";const C=JSON.parse('{"title":"with\u8BED\u53E5","description":"","frontmatter":{},"headers":[],"relativePath":"guide/os/with.md","lastUpdated":1656406601000}'),p={name:"guide/os/with.md"},o=l("",6),e=[o];function t(c,r,D,F,y,A){return a(),n("div",null,e)}var _=s(p,[["render",t]]);export{C as __pageData,_ as default};
