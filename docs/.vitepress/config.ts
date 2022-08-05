@@ -21,7 +21,6 @@ export default defineConfig({
         nav: nav(),
         sidebar: {
             "/guide": sidebarGuide(),
-            "/case": sidebarCase(),
             '/packages': sidebarPackage(),
         }
     }
