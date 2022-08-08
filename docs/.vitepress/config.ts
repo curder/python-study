@@ -180,7 +180,8 @@ function sidebarPackage() {
             collapsible: true,
             collapsed: false,
             items: [
-                {text: "httpx", link: '/packages/httpx'},
+                {text: "httpx HTTP请求", link: '/packages/httpx'},
+                {text: "tqdm 进度条", link: '/packages/tqdm'},
             ]
         }
     ];
