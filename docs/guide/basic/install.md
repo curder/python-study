@@ -243,14 +243,6 @@ server {
 ```
 
 
-
-### 启动
-
-```python
-jupyter-notebook --config=/home/USERNAME/.jupyter/jupyter_notebook_config.py
-```
-> 将 `USERNAME` 修改为当前运行的用户。
-
 ### 开机自启
 
 使用下面的脚本可以实现开机自启
@@ -263,7 +255,7 @@ After=network.target
 Type=simple
 ExecStart=/var/www/codes/python-projects/venv/bin/python /var/www/codes/python-projects/venv/bin/jupyter-notebook --config=/home/USERNAME/.jupyter/jupyter_notebook_config.py
 User=USERNAME
-Group=webadmin
+Group=GROUP_USRENAME
 WorkingDirectory=/var/www/codes/python-projects/jupyter-notebook
 # 文件路径名
 Restart=always
@@ -272,7 +264,7 @@ RestartSec=10
 WantedBy=multi-user.target' > /etc/systemd/system/jupyter.service
 ```
 
-> 将 `USERNAME` 修改为当前运行的用户。
+> 将 `USERNAME` 修改为当前运行的用户, `GROUP_USERNAME` 修改为web服务器运行用户，比如 nginx。
 
 ```bash
 systemctl enable jupyter #设置开机自启
@@ -293,6 +285,14 @@ killasgroup=true
 user=USERNAME
 ```
 > 将 `USERNAME` 修改为当前运行的用户。
+
+#### run-jupyter-notebook.sh
+
+```bash
+#!/bin/bash
+
+/var/www/codes/python-projects/venv/bin/python /var/www/codes/python-projects/venv/bin/jupyter-notebook --config=/home/USERNAME/.jupyter/jupyter_notebook_config.py
+```
 
 #### 重启 Supervisor
 ```bash
