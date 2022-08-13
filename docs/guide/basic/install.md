@@ -43,7 +43,7 @@ echo 'eval "$(pyenv init -)"' >> ~/.zshrc
 #### Python 切换
 ```bash
 pyenv global 2.7.18  # 设置全局的 Python 版本，通过将版本号写入 ~/.pyenv/version 文件的方式。
-pyenv local 2.7.18 # 设置 Python 本地版本，通过将版本号写入当前目录下的 .python-version 文件的方式。通过这种方式设置的 Python 版本优先级较 global 高。
+pyenv local 2.7.18 # 设置 Python 本地版本，通过将版本号写入当前目录下的 .python-version 文件的方式。通过这种方式设置的 Python 版本优先级较 global 高。指定的目录下生效，那可以使用 `pyenv local PYTHON_VERSION` 命令修改。
 # 需同在寻找 python 的时候优先级 shell > local > global
 ```
 
@@ -53,6 +53,15 @@ pyenv shell --unset
 pyenv rehash  # 创建垫片路径（为所有已安装的可执行文件创建 shims，如：~/.pyenv/versions/*/bin/*，因此，每当你增删了 Python 版本或带有可执行文件的包（如 pip）以后，都应该执行一次本命令）
 ```
 
+如果想要删除已经下载过的 Python 版本，则使用 uninstall 命令。如下所示：
+
+```
+pyenv uninstall 2.7.18
+```
+
+使用 `pyenv` 以后，可以快速地切换Python的版本，切换Python版本以后，与版本相关的依赖也会一起切换，因此不会造成多版本共存互相干扰的问题。
+
+日常开发过程中使用 `pyenv install`、`pyenv local`、`pyenv global`、`pyenv uninstall` 等进行 Python 版本的安装切换及删除，基本就能满足需要。
 
 
 ## 在 CentOS 上安装Python
