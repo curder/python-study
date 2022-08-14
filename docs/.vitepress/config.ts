@@ -180,9 +180,10 @@ function sidebarPackage() {
             collapsible: true,
             collapsed: false,
             items: [
-                {text: 'Jupyter Lab', link: "/packages/jupyter-lab"},
-                {text: "httpx HTTP请求", link: '/packages/httpx'},
-                {text: "tqdm 进度条", link: '/packages/tqdm'},
+                {text: 'jupyter-lab', link: "/packages/jupyter-lab"},
+                {text: 'requests', link: "/packages/requests"},
+                {text: "httpx", link: '/packages/httpx'},
+                {text: "tqdm", link: '/packages/tqdm'},
             ]
         }
     ];
