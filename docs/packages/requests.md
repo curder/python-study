@@ -128,6 +128,18 @@ payload = {'some': 'data'}
 r = requests.post(url, json=payload)
 ```
 
+## HTTP 身份验证
+requests 可以发送 [HTTP身份验证](https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Authentication) 的信息给服务端。
+
+```python
+auth = ('curder', 'test')
+r = requests.get('https://httpbin.org/basic-auth/curder/test', auth=auth)
+
+print(r.ok)
+```
+
+
+
 ## 响应状态码
 
 - 正常响应
