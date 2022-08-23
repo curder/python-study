@@ -4,7 +4,7 @@
 
 文档地址：[Requests Quickstart](https://requests.readthedocs.io/en/latest/user/quickstart/)
 
-## 安装 `requests`
+## 安装
 
 requests 模块是一个第三方模块，需要在 python (虚拟)环境中额外安装，使用下面的命令直接在终端中安装：
 
@@ -53,6 +53,26 @@ print(r.encoding)  # 获取编码字符集
 print(r.json())  # 获取JSON输出内容
 ```
 
+### 查看响应对象
+
+使用 `dir` 函数查看响应对象
+
+```python
+r = requests.get('https://httpbin.org/get')
+print(dir(r))
+```
+
+### 查看属性详情
+
+使用 `help` 函数查看属性详情
+
+```python
+r = requests.get('https://httpbin.org/get')
+print(help(r))
+print(help(r.request))
+```
+
+
 ## 请求方法
 
 ```python
@@ -87,7 +107,7 @@ print(r.url)  # https://httpbin.org/get?key1=value1&key2=value2&key2=value3
 ```
 > 任何值为 `None` 的字典键都不会添加到 URL 的查询字符串中。
 
-## 发送JSON序列化数据
+## 发送 json 数据
 
 ```python
 import requests
@@ -102,27 +122,24 @@ r = requests.post(url, json=payload)
 - 获取响应 Cookies
     ```python
     import requests
-    r = requests.get(
-        url='https://httpbin.org/cookies/set?chocolate=chip',
-        verify=False,
-        allow_redirects=False
-    )
-    print(r.cookies['chocolate'])
+
+    with requests.Session() as session:
+        cookies = {"chocolate": "chip"} # 配置 cookies 字典
+        r = session.get('https://httpbin.curder.com/cookies', cookies=cookies)  # 获取 cookies
+        print(r.json())
+        print(r.cookies['chocolate'])
     ```
 
 - 自定义 cookies 请求
     将自定义的 `cookie` 发送到服务器，可以使用 `cookies` 参数
     ```python
     import requests
-    cookies = dict(chocolate='chip')
 
-    r = requests.get(
-        url='https://httpbin.org/cookies',
-        cookies=cookies,
-        verify=False,
-        allow_redirects=False
-    )
-    print(r.request.headers)
+    with requests.Session() as session:
+        session.cookies.set('chocolate', 'chip') # 设置请求 cookies
+        r = session.get('https://httpbin.curder.com/cookies', cookies=cookies)  # 获取 cookies
+        print(r.json())
+        print(r.cookies['chocolate'])
     ```
 更多 Cookies 的使用[查看这里](https://requests.readthedocs.io/en/latest/user/quickstart/#cookies)。
 
@@ -133,7 +150,11 @@ r = requests.post(url, json=payload)
 ```python
 import requests
 
-requests.get('https://github.com/', timeout=1)  # 设置请求超时时间为 1 秒
+try:
+    r = requests.get('https://httpbin.curder.com/delay/3', timeout=2)  # 设置请求超时时间为 2 秒
+except requests.ReadTimeout:
+    print('read timeout')
+    # send mail or notification.
 ```
 
 `timeout` 不是整个响应下载的时间限制；相反，如果服务器在 `timeout` 秒内没有发出响应（更准确地说，如果在 `timeout` 秒内底层套接字上没有收到任何字节），则会引发异常。
@@ -148,16 +169,16 @@ with requests.Session() as client:
     r = client.get('https://httpbin.org/get')
 ```
 
-### client 也具有跟 httpx 一样的请求方法#
+### Session() 也具有跟 httpx 一样的请求方法
 
 ```python
 import requests
 
 with requests.Session() as session:
     headers = {'X-Custom': 'value'}
-    r = session.get('https://example.com', headers=headers)
-    # client.post('...')
-print(r.status_code, r.json())
+    r = session.get('https://httpbin.org/get', headers=headers)
+    # session.post('https://httpbin.org/post', headers=headers)
+    print(r.status_code, r.json())
 ```
 
 ### 跨请求共用配置
