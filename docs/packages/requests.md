@@ -201,10 +201,12 @@ print(r.headers.get('content-type'))  # 使用 get 方法获取具体响应头
     import requests
 
     with requests.Session() as session:
-        session.cookies.set('chocolate', 'chip') # 设置请求 cookies
-        r = session.get('https://httpbin.org/cookies', cookies=cookies)  # 获取 cookies
-        print(r.json())
-        print(r.cookies['chocolate'])
+        jar = session.cookies
+        jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')
+        jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/elsewhere') # 不会被设置，因为访问的不是这个path
+        url = 'https://httpbin.org/cookies'
+        r = requests.get(url, cookies=jar)
+        print(r.text)
     ```
 
 ## 重定向和请求记录
