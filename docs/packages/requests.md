@@ -35,6 +35,21 @@ Successfully installed certifi-2022.6.15 charset-normalizer-2.1.0 idna-3.3 reque
 ```
 :::
 
+## 请求方法
+
+```python
+
+import requests
+
+# 简单请求方法 get、post、put、delete、head、options
+r = requests.get('https://httpbin.org/get')
+
+r = requests.post('https://httpbin.org/post', data={"key": "value"})  # 传递字典给请求主体
+r = requests.put('https://httpbin.org/put', data={"key": "value"})  # 传递字典给请求主体
+r = requests.delete('https://httpbin.org/delete')
+r = requests.head('https://httpbin.org/get')
+r = requests.options('https://httpbin.org/get')
+```
 
 ## 发送请求
 
@@ -47,9 +62,10 @@ r = requests.get('https://httpbin.org/json')
 print(r.request.headers)  # 获取响应对象的请求头
 print(r.url) # 获取响应 URL
 print(r.status_code)  # 获取响应状态码
-print(r.content)  # 获取二进制响应内容
 print(r.headers['content-type'])  # 获取响应头 Content-Type
-print(r.encoding)  # 获取编码字符集
+print(r.content)  # 获取二进制响应内容
+print(r.encoding)  # 获取响应的编码字符集，也可以设置编码字符集
+print(r.text)  # 获取响应文本内容
 print(r.json())  # 获取JSON输出内容
 ```
 
@@ -72,24 +88,19 @@ print(help(r))
 print(help(r.request))
 ```
 
+## 自定义请求头
 
-## 请求方法
+如果想将自定义的 HTTP 请求头添加到请求中，只需将 dict 字典传递给 `headers` 参数。
 
 ```python
-
 import requests
 
-# 简单请求方法 get、post、put、delete、head、options
-r = requests.get('https://httpbin.org/get')
-
-r = requests.post('https://httpbin.org/post', data={"key": "value"})  # 传递字典给请求主体
-r = requests.put('https://httpbin.org/put', data={"key": "value"})  # 传递字典给请求主体
-r = requests.delete('https://httpbin.org/delete')
-r = requests.head('https://httpbin.org/get')
-r = requests.options('https://httpbin.org/get')
+r = requests.get('https://httpbin.org/get', headers={'user-agent': 'awesome-app/1.0.0'})
+print(r.request.headers)
 ```
 
-## 参数传递
+
+## 传递参数
 
 `requests` 支持直接将字典参数传递给 `params` 参数。
 
@@ -117,31 +128,108 @@ payload = {'some': 'data'}
 r = requests.post(url, json=payload)
 ```
 
+## 响应状态码
+
+- 正常响应
+```python
+import requests
+
+r = requests.get('https://httpbin.org/get')
+print(r.status_code, r.status_code == requests.codes.ok) # 200 True
+```
+
+- 404响应
+
+```python
+import requests
+
+r = requests.get('https://httpbin.org/status/404')
+print(r.status_code) # 404
+r.raise_for_status  # 获取错误详情，如果没有错误则返回 None
+```
+
+## 响应头
+
+```python
+import requests
+
+r = requests.get('https://httpbin.org/get')
+
+print(r.headers)  # 获取所有响应头
+print(r.headers['Content-Type'])  # 获取某个响应头
+print(r.headers.get('content-type'))  # 使用 get 方法获取具体响应头
+```
+> 响应头名不区分大小写
+
+
 ## Cookies
 
 - 获取响应 Cookies
     ```python
     import requests
 
-    with requests.Session() as session:
-        cookies = {"chocolate": "chip"} # 配置 cookies 字典
-        r = session.get('https://httpbin.curder.com/cookies', cookies=cookies)  # 获取 cookies
-        print(r.json())
-        print(r.cookies['chocolate'])
+    cookies = {"chocolate": "chip"} # 配置 cookies 字典
+    r = requests.get('https://httpbin.org/cookies', cookies=cookies)  # 获取 cookies
+    print(r.text)
+    ```
+
+- 使用 `RequestsCookieJar` 自定义Cookies
+    ```python
+    jar = requests.cookies.RequestsCookieJar()
+    jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')
+    jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/elsewhere')
+    url = 'https://httpbin.org/cookies'
+    r = requests.get(url, cookies=jar)
+    print(r.text)
     ```
 
 - 自定义 cookies 请求
-    将自定义的 `cookie` 发送到服务器，可以使用 `cookies` 参数
+    将自定义的 `cookie` 发送到服务器，可以使用 `cookies` 参数。
     ```python
     import requests
 
     with requests.Session() as session:
         session.cookies.set('chocolate', 'chip') # 设置请求 cookies
-        r = session.get('https://httpbin.curder.com/cookies', cookies=cookies)  # 获取 cookies
+        r = session.get('https://httpbin.org/cookies', cookies=cookies)  # 获取 cookies
         print(r.json())
         print(r.cookies['chocolate'])
     ```
-更多 Cookies 的使用[查看这里](https://requests.readthedocs.io/en/latest/user/quickstart/#cookies)。
+
+## 重定向和请求记录
+
+通过 `history` 属性对响应对象的历史属性来跟踪重定向。
+
+- 从http跳转到https
+```python
+import requests
+
+r = requests.get('http://github.com/')
+
+print(r.url)  # 'https://github.com/'
+print(r.status_code)  # 200
+print(r.history)  # [<Response [301]>]
+```
+
+如果使用 `GET`、`OPTIONS`、`POST`、`PUT`、`PATCH` 或 `DELETE`，可以使用 `allow_redirects` 参数禁用重定向处理：
+
+```python
+r = requests.get('http://github.com/', allow_redirects=False)
+
+print(r.status_code)  # 301
+print(r.history)  # []
+```
+
+如果使用 `HEAD` 请求方法发起请求，也可以启用重定向：
+
+```python
+import requests
+
+r = requests.head('http://github.com/', allow_redirects=True)
+print(r.url)  # 'https://github.com/'
+
+print(r.history)  # [<Response [301]>]
+```
+
 
 ## 请求超时时间
 
@@ -151,13 +239,15 @@ r = requests.post(url, json=payload)
 import requests
 
 try:
-    r = requests.get('https://httpbin.curder.com/delay/3', timeout=2)  # 设置请求超时时间为 2 秒
+    r = requests.get('https://httpbin.org/delay/3', timeout=2)  # 设置请求超时时间为 2 秒
 except requests.ReadTimeout:
     print('read timeout')
     # send mail or notification.
 ```
 
 `timeout` 不是整个响应下载的时间限制；相反，如果服务器在 `timeout` 秒内没有发出响应（更准确地说，如果在 `timeout` 秒内底层套接字上没有收到任何字节），则会引发异常。
+
+
 
 ## 请求上下文
 
@@ -167,18 +257,6 @@ import requests
 # requests.Session() <=> httpx.client()
 with requests.Session() as client:
     r = client.get('https://httpbin.org/get')
-```
-
-### Session() 也具有跟 httpx 一样的请求方法
-
-```python
-import requests
-
-with requests.Session() as session:
-    headers = {'X-Custom': 'value'}
-    r = session.get('https://httpbin.org/get', headers=headers)
-    # session.post('https://httpbin.org/post', headers=headers)
-    print(r.status_code, r.json())
 ```
 
 ### 跨请求共用配置
@@ -192,4 +270,16 @@ with requests.Session() as session:
     session.headers.update(headers)
     r = session.get(url)
     print(r.json()['headers']['User-Agent'])
+```
+
+### Session() 也具有跟 httpx 一样的请求方法
+
+```python
+import requests
+
+with requests.Session() as session:
+    headers = {'X-Custom': 'value'}
+    r = session.get('https://httpbin.org/get', headers=headers)
+    # session.post('https://httpbin.org/post', headers=headers)
+    print(r.status_code, r.json())
 ```
