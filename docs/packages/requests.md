@@ -38,7 +38,6 @@ Successfully installed certifi-2022.6.15 charset-normalizer-2.1.0 idna-3.3 reque
 ## 请求方法
 
 ```python
-
 import requests
 
 # 简单请求方法 get、post、put、delete、head、options
@@ -60,7 +59,7 @@ import requests
 r = requests.get('https://httpbin.org/json')
 
 print(r.request.headers)  # 获取响应对象的请求头
-print(r.url) # 获取响应 URL
+print(r.url)  # 获取响应 URL
 print(r.status_code)  # 获取响应状态码
 print(r.headers['content-type'])  # 获取响应头 Content-Type
 print(r.content)  # 获取二进制响应内容
@@ -118,7 +117,24 @@ print(r.url)  # https://httpbin.org/get?key1=value1&key2=value2&key2=value3
 ```
 > 任何值为 `None` 的字典键都不会添加到 URL 的查询字符串中。
 
-## 发送 json 数据
+## 请求主体
+
+### 传递字典
+
+发送 POST 请求时可以传递字典作为请求主体。
+
+```python
+import requests
+
+payload = {'username': 'curder', 'password': 'test'}
+r = requests.post('https://httpbin.org/post', data=payload)
+print(r.text)
+
+r_dict = r.json()
+print(r_dict.get('form'))  # 返回响应字典
+```
+
+### 传递 json
 
 ```python
 import requests
@@ -126,6 +142,7 @@ import requests
 url = 'https://httpbin.org/post'
 payload = {'some': 'data'}
 r = requests.post(url, json=payload)
+print(r.text)
 ```
 
 ## HTTP 身份验证
@@ -138,6 +155,22 @@ r = requests.get('https://httpbin.org/basic-auth/curder/test', auth=auth)
 print(r.ok)
 ```
 
+
+## 请求超时时间
+
+默认如果没有明确指定超时，则请求不会超时。
+
+```python
+import requests
+
+try:
+    r = requests.get('https://httpbin.org/delay/3', timeout=2)  # 设置请求超时时间为 2 秒
+except requests.ReadTimeout:
+    print('read timeout')
+    # send mail or notification.
+```
+
+`timeout` 不是整个响应下载的时间限制；相反，如果服务器在 `timeout` 秒内没有发出响应（更准确地说，如果在 `timeout` 秒内底层套接字上没有收到任何字节），则会引发异常。
 
 
 ## 响应状态码
@@ -177,6 +210,7 @@ print(r.headers.get('content-type'))  # 使用 get 方法获取具体响应头
 ## Cookies
 
 - 获取响应 Cookies
+    在 httpbin.org 站点有一个 `https://httpbin.org/cookies` 的 GET 请求地址，响应中返回当前 cookies 值。我们可以借助它查看我们请求时设置的 cookies 是否成功。例如：
     ```python
     import requests
 
@@ -186,6 +220,7 @@ print(r.headers.get('content-type'))  # 使用 get 方法获取具体响应头
     ```
 
 - 使用 `RequestsCookieJar` 自定义Cookies
+    也可以通过 `requests.cookies.RequestsCookieJar()` 初始化一个 Cookies，对 Cookies 进行精细化的配置。
     ```python
     jar = requests.cookies.RequestsCookieJar()
     jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')
@@ -195,15 +230,15 @@ print(r.headers.get('content-type'))  # 使用 get 方法获取具体响应头
     print(r.text)
     ```
 
-- 自定义 cookies 请求
-    将自定义的 `cookie` 发送到服务器，可以使用 `cookies` 参数。
+- 自定义 Cookies 请求
+    也可以通过上下问的 `cookies` 属性设置 Cookie，并将自定义的 `cookie` 发送到服务器。
     ```python
     import requests
 
     with requests.Session() as session:
         jar = session.cookies
         jar.set('tasty_cookie', 'yum', domain='httpbin.org', path='/cookies')
-        jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/elsewhere') # 不会被设置，因为访问的不是这个path
+        jar.set('gross_cookie', 'blech', domain='httpbin.org', path='/elsewhere') # 不会被设置，因为访问的不是这个uri
         url = 'https://httpbin.org/cookies'
         r = requests.get(url, cookies=jar)
         print(r.text)
@@ -217,16 +252,18 @@ print(r.headers.get('content-type'))  # 使用 get 方法获取具体响应头
 ```python
 import requests
 
-r = requests.get('http://github.com/')
+# 模拟 302 跳转
+r = requests.get('https://httpbin.org/redirect-to', params={"url": "https://www.baidu.com"})
 
-print(r.url)  # 'https://github.com/'
+print(r.url)  # https://www.baidu.com
 print(r.status_code)  # 200
-print(r.history)  # [<Response [301]>]
+print(r.history)  # [<Response [302]>]
 ```
 
 如果使用 `GET`、`OPTIONS`、`POST`、`PUT`、`PATCH` 或 `DELETE`，可以使用 `allow_redirects` 参数禁用重定向处理：
 
 ```python
+import requests
 r = requests.get('http://github.com/', allow_redirects=False)
 
 print(r.status_code)  # 301
@@ -238,62 +275,52 @@ print(r.history)  # []
 ```python
 import requests
 
-r = requests.head('http://github.com/', allow_redirects=True)
-print(r.url)  # 'https://github.com/'
 
-print(r.history)  # [<Response [301]>]
+r = requests.head('https://httpbin.org/redirect-to', params={"url": "https://www.baidu.com"}, allow_redirects=True)
+
+print(r.url)  # https://www.baidu.com
+print(r.history)  # [<Response [302]>]
 ```
-
-
-## 请求超时时间
-
-默认如果没有明确指定超时，则请求不会超时。
-
-```python
-import requests
-
-try:
-    r = requests.get('https://httpbin.org/delay/3', timeout=2)  # 设置请求超时时间为 2 秒
-except requests.ReadTimeout:
-    print('read timeout')
-    # send mail or notification.
-```
-
-`timeout` 不是整个响应下载的时间限制；相反，如果服务器在 `timeout` 秒内没有发出响应（更准确地说，如果在 `timeout` 秒内底层套接字上没有收到任何字节），则会引发异常。
-
-
 
 ## 请求上下文
 
+使用请求上下文模拟登录后在发送请求的操作。
+
 ```python
 import requests
 
-# requests.Session() <=> httpx.client()
-with requests.Session() as client:
-    r = client.get('https://httpbin.org/get')
+login_url = 'https://passport.17k.com/ck/user/login'  # 登录URL
+login_form_data = {
+    "loginName": "",  # 输入登录用户名
+    "password": "mxb_DVZ9hyk.dhk3",  # 输入密码
+}
+
+book_self_url = 'https://user.17k.com/ck/author/shelf?page=1&appKey=2406394919'  # 登录后要操作的URL
+
+with requests.Session() as session:  # 记录请求当前会话
+    # 登录
+    login_response = session.post(url=login_url, data=login_form_data)
+    # print(login_response.cookies)  # 查看服务器响应cookies
+
+    # 获取我的书架
+    book_self_response = session.get(book_self_url).json()
+
+    # 打印输出JSON响应结果
+    print(book_self_response)
+
 ```
 
 ### 跨请求共用配置
+
+公用请求头
+
 ```python
 import requests
 
-url = 'https://httpbin.org/headers'
-headers = {'User-Agent': 'my-app/1.0.0'}
-
 with requests.Session() as session:
+    headers = {'User-Agent': 'my-app/1.0.0'}
     session.headers.update(headers)
-    r = session.get(url)
-    print(r.json()['headers']['User-Agent'])
-```
-
-### Session() 也具有跟 httpx 一样的请求方法
-
-```python
-import requests
-
-with requests.Session() as session:
-    headers = {'X-Custom': 'value'}
-    r = session.get('https://httpbin.org/get', headers=headers)
-    # session.post('https://httpbin.org/post', headers=headers)
-    print(r.status_code, r.json())
+    r = session.get('https://httpbin.org/headers')
+    r2 = session.get('https://httpbin.org/get')
+    print(r.json()['headers']['User-Agent'], r2.json()['headers'].get('User-Agent'), sep="\n")
 ```
