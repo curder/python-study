@@ -22,6 +22,7 @@ export default defineConfig({
         sidebar: {
             "/guide": sidebarGuide(),
             '/packages': sidebarPackage(),
+            '/others': sidebarOthers(),
         }
     }
 });
@@ -31,6 +32,7 @@ function nav() {
         {text: 'Guide', link: '/guide/basic/install', activeMatch: '/guide/'},
         // {text: 'Cases', link: '/case/io', activeMatch: '/case/'},
         {text: 'Packages', link: '/packages/httpx', activeMatch: '/packages/'},
+        {text: 'Others', link: '/others/ttshitu', activeMatch: '/others/'},
     ];
 }
 
@@ -184,6 +186,19 @@ function sidebarPackage() {
                 {text: 'requests', link: "/packages/requests"},
                 {text: "httpx", link: '/packages/httpx'},
                 {text: "tqdm", link: '/packages/tqdm'},
+            ]
+        }
+    ];
+}
+
+function sidebarOthers() {
+    return [
+        {
+            text: "打码平台",
+            collapsible: true,
+            collapsed: false,
+            items: [
+                {text: '图鉴', link: "/others/ttshitu"},
             ]
         }
     ];
