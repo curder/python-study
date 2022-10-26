@@ -1,13 +1,13 @@
 # httpx
 
-HTTPX 依赖 Python 版本 3.6+，使用异步请求需要 Python 版本 3.8+
+[HTTPX](https://www.python-httpx.org/) 依赖 Python 版本 3.6+，使用异步请求需要 Python 版本 3.8+
 
 ## 安装
 
 使用 pip 安装:
 
 ```bash
-pip install httpx
+pip install httpx // [!code focus]
 
 pip install 'httpx[http2]' # 如果需要 HTTP/2 支持
 ```
