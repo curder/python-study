@@ -9,7 +9,7 @@ HTTPX 依赖 Python 版本 3.6+，使用异步请求需要 Python 版本 3.8+
 ```bash
 pip install httpx
 
-pip install httpx[http2] # 如果需要 HTTP/2 支持
+pip install 'httpx[http2]' # 如果需要 HTTP/2 支持
 ```
 
 ## 简单使用
