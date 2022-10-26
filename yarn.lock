@@ -580,7 +580,7 @@ vite@^3.1.8:
   optionalDependencies:
     fsevents "~2.3.2"
 
-vitepress@^1.0.0-alpha.4:
+vitepress@^1.0.0-alpha.25:
   version "1.0.0-alpha.25"
   resolved "https://registry.npmjs.org/vitepress/-/vitepress-1.0.0-alpha.25.tgz#3cfaa80cc0f9a9194f372f96622b2823aa1aa907"
   integrity sha512-qvKQ4aCArGL8nxP7BAeMBY/N9qm6fX5/dVNGESDvpkm/M8BQlIkOIEanlkAEPY9VOCMA1zcX3wtstcEcnjc5fA==
