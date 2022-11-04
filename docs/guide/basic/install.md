@@ -2,17 +2,17 @@
 
 Python是跨平台的，它可以运行在Windows、Mac和各种Linux/Unix系统上。
 
-在Windows上写Python程序，放到Linux上也是能够运行的。
+在 Windows 上写 Python 程序，放到 Linux 上也是能够运行的。
 
-要开始学习Python编程，首先就得把Python安装到你的电脑里。
+要开始学习 Python 编程，首先需要将 Python 解释器安装在电脑上。
 
-安装后，你会得到Python解释器（就是负责运行Python程序的），一个命令行交互环境，还有一个简单的集成开发环境。
+安装后，会得到Python解释器（负责运行Python程序），一个命令行交互环境。
 
-## 在 Mac 上安装Python
+## 在 Mac 上安装 Python
 
-如果使用的是Mac，系统是 OSX >= 10.9，那么系统自带的 Python 版本是2.7。
+如果使用的是Mac，系统是 OSX >= 10.9，那么系统自带的 Python 版本是 2.7。
 
-要安装最新的Python 3.9.12，有两个方法：
+要安装最新的 Python 3.9.12，有两个方法：
 
 - 方法一：从Python官网下载Python 3.9.12的[安装程序](https://www.python.org/downloads/)，找到并下载后双击运行并安装；
 
