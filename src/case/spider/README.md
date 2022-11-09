@@ -31,7 +31,7 @@ pip3 install asyncio aiohttp aiofiles
 2. 使用正则匹配页面内容
 3. 循环内容并保存到文件
 
-## [爬取彩票网彩票数据](./www.datachart.500.com.py)
+## [爬取彩票网彩票数据](./datachart.500.com.py)
 
 爬取500彩票网双色球近100期的开奖信息历史数据，页面地址：https://datachart.500.com/ssq/history/history.shtml
 
