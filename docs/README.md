@@ -2,7 +2,7 @@
 
 - [基础](./guide/basic/install.md)
     - [安装](./guide/basic/install.md)
-    - [print函数](./guide/basic/function-print.md)
+    - [print函数](guide/basic/functions/print)
     - [转义字符](./guide/basic/escape-character.md)
     - [系统保留字](./guide/basic/reserved-word.md)
     - [变量](./guide/basic/variable.md)
