@@ -15,7 +15,7 @@
     - [流程判断](./guide/basic/condition)
     - [循环结构](./guide/basic/while-and-for-in.md)
     - [pass语句](./guide/basic/pass.md)
-    - [range函数](./guide/basic/function-range.md)
+    - [range函数](guide/basic/functions/range.md)
     - [else语句](./guide/basic/else.md)
     - [zip函数](./guide/basic/function-zip.md)
     - [错误异常](./guide/basic/exception.md)

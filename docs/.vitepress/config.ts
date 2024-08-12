@@ -68,7 +68,7 @@ function sidebarGuide() {
                 {text: "流程判断", link: "/guide/basic/condition"},
                 {text: "循环结构", link: "/guide/basic/while-and-for-in"},
                 {text: "pass语句", link: "/guide/basic/pass"},
-                {text: "range函数", link: "/guide/basic/function-range"},
+                {text: "range函数", link: "/guide/basic/functions/range"},
                 {text: "else语句", link: "/guide/basic/else"},
                 {text: "zip函数", link: "/guide/basic/function-zip"},
                 {text: "错误异常", link: "/guide/basic/exception"},
