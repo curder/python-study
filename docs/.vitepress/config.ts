@@ -50,7 +50,7 @@ function sidebarGuide() {
         {
             text: "基础",
             collapsible: true,
-            collapsed: false,
+            collapsed: true,
             items: [
                 {text: "安装", link: "/guide/basic/install"},
                 {text: "pip包管理", link: "/guide/basic/pip"},
