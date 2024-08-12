@@ -1,5 +1,6 @@
 node_modules/
 docs/.vitepress/dist/
+docs/.vitepress/cache/
 *.txt
 src/case/spider/umei.cc/
 *.csv
