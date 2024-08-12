@@ -53,6 +53,7 @@ function sidebarGuide() {
             collapsed: false,
             items: [
                 {text: "安装", link: "/guide/basic/install"},
+                {text: "pip包管理", link: "/guide/basic/pip"},
                 {text: "print函数", link: "/guide/basic/function-print"},
                 {text: "转义字符", link: "/guide/basic/escape-character"},
                 {text: "系统保留字", link: "/guide/basic/reserved-word"},
