@@ -59,6 +59,7 @@ function sidebarGuide() {
                 {text: "系统保留字", link: "/guide/basic/reserved-word"},
                 {text: "变量", link: "/guide/basic/variable"},
                 {text: "变量作用域", link: "/guide/basic/variable-scope"},
+                {text: "常量", link: "/guide/basic/const"},
                 {text: "数据类型", link: "/guide/basic/type-of-data"},
                 {text: "数据类型转换", link: "/guide/basic/data-type-conversion"},
                 {text: "代码注释", link: "/guide/basic/comments"},
