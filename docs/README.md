@@ -14,8 +14,6 @@
     - [运算符](./guide/basic/operator.md)
     - [流程判断](./guide/basic/if-elif-else.md)
     - [循环结构](./guide/basic/while-and-for-in.md)
-    - [in和not in](./guide/basic/in-and-not-in.md)
-    - [is和is not](./guide/basic/is-and-is-not.md)
     - [pass语句](./guide/basic/pass.md)
     - [range函数](./guide/basic/function-range.md)
     - [else语句](./guide/basic/else.md)
