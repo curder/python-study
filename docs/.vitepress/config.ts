@@ -9,8 +9,13 @@ export default defineConfig({
     themeConfig: {
         logo: "https://docs.python.org/zh-cn/3/_static/py.svg",
         siteTitle: "Python 学习",
-        outlineTitle: "章节导航",
-        lastUpdatedText: "最后更新时间",
+        outline: {
+            level: 'deep',
+            label: '章节导航',
+        },
+        lastUpdated: {
+            text: "最后更新时间",
+        },
         docFooter: {
             prev: '上一页',
             next: '下一页'
