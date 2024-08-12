@@ -63,7 +63,7 @@ function sidebarGuide() {
                 {text: "数据类型", link: "/guide/basic/type-of-data"},
                 {text: "数据类型转换", link: "/guide/basic/data-type-conversion"},
                 {text: "代码注释", link: "/guide/basic/comments"},
-                {text: "input函数", link: "/guide/basic/function-input"},
+                {text: "input函数", link: "/guide/basic/functions/input"},
                 {text: "运算符", link: "/guide/basic/operator"},
                 {text: "流程判断", link: "/guide/basic/if-elif-else"},
                 {text: "循环结构", link: "/guide/basic/while-and-for-in"},

@@ -10,7 +10,7 @@
     - [数据类型](./guide/basic/type-of-data.md)
     - [数据类型转换](./guide/basic/data-type-conversion.md)
     - [代码注释](./guide/basic/comments.md)
-    - [input函数](./guide/basic/function-input.md)
+    - [input函数](guide/basic/functions/input)
     - [运算符](./guide/basic/operator.md)
     - [流程判断](./guide/basic/if-elif-else.md)
     - [循环结构](./guide/basic/while-and-for-in.md)
